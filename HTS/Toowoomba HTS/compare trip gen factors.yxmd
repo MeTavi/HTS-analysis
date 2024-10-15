@@ -1,0 +1,657 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="11.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="90" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">E:\01-Regional Strategic Models\Toowoomba\DATA\HTS\Toowoomba HTS\Alteryx Output\Output_TripGen_Calibrated_Zones_MyAugust.csv</File>
+          <FormatSpecificOptions>
+            <CodePage>28591</CodePage>
+            <Delimeter>,</Delimeter>
+            <IgnoreErrors>False</IgnoreErrors>
+            <FieldLen>254</FieldLen>
+            <AllowShareWrite>False</AllowShareWrite>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Output_TripGen_Calibrated_Zones_MyAugust.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="ZONE" size="254" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\HTS\Toowoomba HTS\Alteryx Output\Output_TripGen_Calibrated_Zones_MyAugust.csv" type="V_String" />
+            <Field name="SA2_NAME_2011" size="254" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\HTS\Toowoomba HTS\Alteryx Output\Output_TripGen_Calibrated_Zones_MyAugust.csv" type="V_String" />
+            <Field name="Category" size="254" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\HTS\Toowoomba HTS\Alteryx Output\Output_TripGen_Calibrated_Zones_MyAugust.csv" type="V_String" />
+            <Field name="Model_Value" size="254" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\HTS\Toowoomba HTS\Alteryx Output\Output_TripGen_Calibrated_Zones_MyAugust.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="450" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="SA2_NAME_2011" action="GroupBy" rename="SA2_NAME_2011" />
+            <SummarizeField field="Category" action="GroupBy" rename="Category" />
+            <SummarizeField field="Model_Value" action="Sum" rename="Sum_Model_Value" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="318" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Model_Value" selected="True" type="Double" size="8" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="894" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\mztagha\AppData\Local\Temp\Engine_13816_ae185b38d48b4afc869baf7bdee4b3f0_\Engine_23588_a9858fd43cb042708da4f9a7581979ff_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+        <Position x="798" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupFields>
+            <Field field="SA2_NAME_2011" />
+          </GroupFields>
+          <HeaderField field="Category" />
+          <DataField field="Sum_Model_Value" />
+          <Methods>
+            <Method method="Sum" />
+          </Methods>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="SA2_NAME_2011" size="254" source="CrossTab:Group:Sum:" type="V_String" />
+            <Field name="Attr_HBEps" source="CrossTab:Header:Category:Attr_HBEps:Sum:" type="Double" />
+            <Field name="Attr_hbo" source="CrossTab:Header:Category:Attr_hbo:Sum:" type="Double" />
+            <Field name="Attr_hbs" source="CrossTab:Header:Category:Attr_hbs:Sum:" type="Double" />
+            <Field name="Attr_HBWb" source="CrossTab:Header:Category:Attr_HBWb:Sum:" type="Double" />
+            <Field name="Attr_HBWw" source="CrossTab:Header:Category:Attr_HBWw:Sum:" type="Double" />
+            <Field name="Attr_onh" source="CrossTab:Header:Category:Attr_onh:Sum:" type="Double" />
+            <Field name="Attr_wbo" source="CrossTab:Header:Category:Attr_wbo:Sum:" type="Double" />
+            <Field name="Pro_HBEps" source="CrossTab:Header:Category:Pro_HBEps:Sum:" type="Double" />
+            <Field name="Pro_hbo" source="CrossTab:Header:Category:Pro_hbo:Sum:" type="Double" />
+            <Field name="Pro_hbs" source="CrossTab:Header:Category:Pro_hbs:Sum:" type="Double" />
+            <Field name="Pro_HBWb" source="CrossTab:Header:Category:Pro_HBWb:Sum:" type="Double" />
+            <Field name="Pro_HBWw" source="CrossTab:Header:Category:Pro_HBWw:Sum:" type="Double" />
+            <Field name="Pro_onh" source="CrossTab:Header:Category:Pro_onh:Sum:" type="Double" />
+            <Field name="Pro_wbo" source="CrossTab:Header:Category:Pro_wbo:Sum:" type="Double" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="SA2_NAME_2011" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="258" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">E:\01-Regional Strategic Models\Toowoomba\DATA\HTS\Toowoomba HTS\Alteryx Output\ProductionAttraction_Twb_MyAugust.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>ProductionAttraction_Twb_MyAugust.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Pro_Production SA2" size="40" source="CrossTab:Group:Sum:" type="V_String" />
+            <Field name="Pro_HBW_w" source="Formula: IIF(ISNULL([_CurrentField_]),0,[_CurrentField_]) " type="Double" />
+            <Field name="Pro_HBW_b" source="Formula: IIF(ISNULL([_CurrentField_]),0,[_CurrentField_]) " type="Double" />
+            <Field name="Pro_HBEps" source="Formula: IIF(ISNULL([_CurrentField_]),0,[_CurrentField_]) " type="Double" />
+            <Field name="Pro_HBEt" source="Formula: IIF(ISNULL([_CurrentField_]),0,[_CurrentField_]) " type="Double" />
+            <Field name="Pro_hbo" source="Formula: IIF(ISNULL([_CurrentField_]),0,[_CurrentField_]) " type="Double" />
+            <Field name="Pro_hbs" source="Formula: IIF(ISNULL([_CurrentField_]),0,[_CurrentField_]) " type="Double" />
+            <Field name="Pro_onh" source="Formula: IIF(ISNULL([_CurrentField_]),0,[_CurrentField_]) " type="Double" />
+            <Field name="Pro_wbo" source="Formula: IIF(ISNULL([_CurrentField_]),0,[_CurrentField_]) " type="Double" />
+            <Field name="Pro_Total" source="Summarize: Sum - Value" type="Double" />
+            <Field name="Attr_Attraction SA2" size="40" source="CrossTab:Group:Sum:" type="V_String" />
+            <Field name="Attr_HBW_w" source="Formula: IIF(ISNULL([_CurrentField_]),0,[_CurrentField_]) " type="Double" />
+            <Field name="Attr_HBW_b" source="Formula: IIF(ISNULL([_CurrentField_]),0,[_CurrentField_]) " type="Double" />
+            <Field name="Attr_HBEps" source="Formula: IIF(ISNULL([_CurrentField_]),0,[_CurrentField_]) " type="Double" />
+            <Field name="Attr_HBEt" source="Formula: IIF(ISNULL([_CurrentField_]),0,[_CurrentField_]) " type="Double" />
+            <Field name="Attr_hbo" source="Formula: IIF(ISNULL([_CurrentField_]),0,[_CurrentField_]) " type="Double" />
+            <Field name="Attr_hbs" source="Formula: IIF(ISNULL([_CurrentField_]),0,[_CurrentField_]) " type="Double" />
+            <Field name="Attr_onh" source="Formula: IIF(ISNULL([_CurrentField_]),0,[_CurrentField_]) " type="Double" />
+            <Field name="Attr_wbo" source="Formula: IIF(ISNULL([_CurrentField_]),0,[_CurrentField_]) " type="Double" />
+            <Field name="Attr_Total" source="Summarize: Sum - Value" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="618" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\mztagha\AppData\Local\Temp\Engine_13816_ae185b38d48b4afc869baf7bdee4b3f0_\Engine_23588_7f682c932a5d41d3a0972319fa496528_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="90" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">E:\01-Regional Strategic Models\Toowoomba\DATA\HTS\Toowoomba HTS\Alteryx Output\Output_TripGen_Calibrated_Zones_MyAugust_3WGTREG.csv</File>
+          <FormatSpecificOptions>
+            <CodePage>28591</CodePage>
+            <Delimeter>,</Delimeter>
+            <IgnoreErrors>False</IgnoreErrors>
+            <FieldLen>254</FieldLen>
+            <AllowShareWrite>False</AllowShareWrite>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Output_TripGen_Calibrated_Zones_MyAugust_3WGTREG.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="ZONE" size="254" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\HTS\Toowoomba HTS\Alteryx Output\Output_TripGen_Calibrated_Zones_MyAugust_3WGTREG.csv" type="V_String" />
+            <Field name="SA2_NAME_2011" size="254" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\HTS\Toowoomba HTS\Alteryx Output\Output_TripGen_Calibrated_Zones_MyAugust_3WGTREG.csv" type="V_String" />
+            <Field name="Category" size="254" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\HTS\Toowoomba HTS\Alteryx Output\Output_TripGen_Calibrated_Zones_MyAugust_3WGTREG.csv" type="V_String" />
+            <Field name="Model_Value" size="254" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\HTS\Toowoomba HTS\Alteryx Output\Output_TripGen_Calibrated_Zones_MyAugust_3WGTREG.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="450" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="SA2_NAME_2011" action="GroupBy" rename="SA2_NAME_2011" />
+            <SummarizeField field="Category" action="GroupBy" rename="Category" />
+            <SummarizeField field="Model_Value" action="Sum" rename="Sum_Model_Value" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="366" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Model_Value" selected="True" type="Double" size="8" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="942" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\mztagha\AppData\Local\Temp\Engine_13816_ae185b38d48b4afc869baf7bdee4b3f0_\Engine_23588_981492a69dcc48ecb5474d9243108d30_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+        <Position x="846" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupFields>
+            <Field field="SA2_NAME_2011" />
+          </GroupFields>
+          <HeaderField field="Category" />
+          <DataField field="Sum_Model_Value" />
+          <Methods>
+            <Method method="Sum" />
+          </Methods>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="SA2_NAME_2011" size="254" source="CrossTab:Group:Sum:" type="V_String" />
+            <Field name="Attr_HBEps" source="CrossTab:Header:Category:Attr_HBEps:Sum:" type="Double" />
+            <Field name="Attr_hbo" source="CrossTab:Header:Category:Attr_hbo:Sum:" type="Double" />
+            <Field name="Attr_hbs" source="CrossTab:Header:Category:Attr_hbs:Sum:" type="Double" />
+            <Field name="Attr_HBWb" source="CrossTab:Header:Category:Attr_HBWb:Sum:" type="Double" />
+            <Field name="Attr_HBWw" source="CrossTab:Header:Category:Attr_HBWw:Sum:" type="Double" />
+            <Field name="Attr_onh" source="CrossTab:Header:Category:Attr_onh:Sum:" type="Double" />
+            <Field name="Attr_wbo" source="CrossTab:Header:Category:Attr_wbo:Sum:" type="Double" />
+            <Field name="Pro_HBEps" source="CrossTab:Header:Category:Pro_HBEps:Sum:" type="Double" />
+            <Field name="Pro_hbo" source="CrossTab:Header:Category:Pro_hbo:Sum:" type="Double" />
+            <Field name="Pro_hbs" source="CrossTab:Header:Category:Pro_hbs:Sum:" type="Double" />
+            <Field name="Pro_HBWb" source="CrossTab:Header:Category:Pro_HBWb:Sum:" type="Double" />
+            <Field name="Pro_HBWw" source="CrossTab:Header:Category:Pro_HBWw:Sum:" type="Double" />
+            <Field name="Pro_onh" source="CrossTab:Header:Category:Pro_onh:Sum:" type="Double" />
+            <Field name="Pro_wbo" source="CrossTab:Header:Category:Pro_wbo:Sum:" type="Double" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="SA2_NAME_2011" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="654" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="SA2_NAME_2011" />
+            <Field field="Category" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="SA2_NAME_2011" />
+            <Field field="Category" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_SA2_NAME_2011" selected="False" rename="Right_SA2_NAME_2011" />
+                <SelectField field="Right_Category" selected="False" rename="Right_Category" />
+                <SelectField field="Right_Sum_Model_Value" selected="True" rename="Right_Sum_Model_Value" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="750" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="([Sum_Model_Value]/[Right_Sum_Model_Value])" field="ratio" size="8" type="Double" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[ratio = ([Sum_Model_Value]/[Right_Sum_Model_Value])
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+        <Position x="870" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldType>Numeric</FieldType>
+          <Fields orderChanged="False">
+            <Field name="Sum_Model_Value" />
+            <Field name="Right_Sum_Model_Value" />
+            <Field name="ratio" />
+            <Field name="*Unknown" selected="False" />
+          </Fields>
+          <CopyOutput value="False" />
+          <Expression>Round([_CurrentField_], 0.01)</Expression>
+          <ChangeFieldType value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Round([_CurrentField_], 0.01)</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="966" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\mztagha\AppData\Local\Temp\Engine_13816_ae185b38d48b4afc869baf7bdee4b3f0_\Engine_23588_4b3343ea4b964fd6938526669c0bf757_.yxdb</TempFile>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+        <Position x="942" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupFields>
+            <Field field="SA2_NAME_2011" />
+          </GroupFields>
+          <HeaderField field="Category" />
+          <DataField field="ratio" />
+          <Methods>
+            <Method method="Sum" />
+          </Methods>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="SA2_NAME_2011" size="254" source="CrossTab:Group:Sum:" type="V_String" />
+            <Field name="Attr_HBEps" source="CrossTab:Header:Category:Attr_HBEps:Sum:" type="Double" />
+            <Field name="Attr_hbo" source="CrossTab:Header:Category:Attr_hbo:Sum:" type="Double" />
+            <Field name="Attr_hbs" source="CrossTab:Header:Category:Attr_hbs:Sum:" type="Double" />
+            <Field name="Attr_HBWb" source="CrossTab:Header:Category:Attr_HBWb:Sum:" type="Double" />
+            <Field name="Attr_HBWw" source="CrossTab:Header:Category:Attr_HBWw:Sum:" type="Double" />
+            <Field name="Attr_onh" source="CrossTab:Header:Category:Attr_onh:Sum:" type="Double" />
+            <Field name="Attr_wbo" source="CrossTab:Header:Category:Attr_wbo:Sum:" type="Double" />
+            <Field name="Pro_HBEps" source="CrossTab:Header:Category:Pro_HBEps:Sum:" type="Double" />
+            <Field name="Pro_hbo" source="CrossTab:Header:Category:Pro_hbo:Sum:" type="Double" />
+            <Field name="Pro_hbs" source="CrossTab:Header:Category:Pro_hbs:Sum:" type="Double" />
+            <Field name="Pro_HBWb" source="CrossTab:Header:Category:Pro_HBWb:Sum:" type="Double" />
+            <Field name="Pro_HBWw" source="CrossTab:Header:Category:Pro_HBWw:Sum:" type="Double" />
+            <Field name="Pro_onh" source="CrossTab:Header:Category:Pro_onh:Sum:" type="Double" />
+            <Field name="Pro_wbo" source="CrossTab:Header:Category:Pro_wbo:Sum:" type="Double" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="SA2_NAME_2011" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="906" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Attr_HBEps" action="Sum" rename="Sum_Attr_HBEps" />
+            <SummarizeField field="Attr_hbo" action="Sum" rename="Sum_Attr_hbo" />
+            <SummarizeField field="Attr_hbs" action="Sum" rename="Sum_Attr_hbs" />
+            <SummarizeField field="Attr_HBWb" action="Sum" rename="Sum_Attr_HBWb" />
+            <SummarizeField field="Attr_HBWw" action="Sum" rename="Sum_Attr_HBWw" />
+            <SummarizeField field="Attr_onh" action="Sum" rename="Sum_Attr_onh" />
+            <SummarizeField field="Attr_wbo" action="Sum" rename="Sum_Attr_wbo" />
+            <SummarizeField field="Pro_HBEps" action="Sum" rename="Sum_Pro_HBEps" />
+            <SummarizeField field="Pro_hbo" action="Sum" rename="Sum_Pro_hbo" />
+            <SummarizeField field="Pro_hbs" action="Sum" rename="Sum_Pro_hbs" />
+            <SummarizeField field="Pro_HBWb" action="Sum" rename="Sum_Pro_HBWb" />
+            <SummarizeField field="Pro_HBWw" action="Sum" rename="Sum_Pro_HBWw" />
+            <SummarizeField field="Pro_onh" action="Sum" rename="Sum_Pro_onh" />
+            <SummarizeField field="Pro_wbo" action="Sum" rename="Sum_Pro_wbo" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="13" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="13" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Join" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>compare trip gen factors</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

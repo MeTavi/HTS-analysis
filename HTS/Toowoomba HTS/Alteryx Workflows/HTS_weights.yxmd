@@ -1,0 +1,2852 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="11.0">
+  <Nodes>
+    <Node ToolID="121">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="258" y="54" width="1008" height="240.5" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>HTS_Weights
+Compare the Household Travel Survey Dataset with Demographics Data  
+v1
+
+Mehdi Taghavi
+
+06/07/2017
+MT
+
+None
+
+This workflow shares the inputs from the HTS folder and Demography Folder. Both Folders are under the same parent folder "DATA". 
+
+This workflow does not change HTS Access File.</Text>
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor r="248" g="247" b="242" />
+          <Shape shape="1" />
+          <Justification Justification="3" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="122">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="54" y="54" width="192" height="240.5" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text><![CDATA[Workflow Name:
+Description:
+Version:
+
+Owner:
+
+Last Updated:
+Updated By:
+
+Macro's Used:
+
+Notes:
+]]></Text>
+          <Font name="Segoe UI" size="8.25" style="1" />
+          <TextColor name="White" />
+          <FillColor r="0" g="60" b="105" />
+          <Shape shape="1" />
+          <Justification Justification="5" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="123">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="54" y="306" width="192" height="204" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>INPUTS</Text>
+          <Font name="Segoe UI" size="14.25" style="1" />
+          <TextColor name="White" />
+          <FillColor r="0" g="60" b="105" />
+          <Shape shape="1" />
+          <Justification Justification="5" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="125">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="798" y="306" width="468" height="204" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text><![CDATA[Comments
+Person's Table from the HTS dataset is linked to HHD Table to identify the HOME SA2
+Because this workflow needs to count unique HHD ID's and sums the weigthed HHDs, linked tables should be used with caution. (using the linked person's table with HHD table causes multiple counting )  ]]></Text>
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="127">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="54" y="1638" width="192" height="192" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Output</Text>
+          <Font name="Segoe UI" size="14.25" style="1" />
+          <TextColor name="White" />
+          <FillColor r="0" g="60" b="105" />
+          <Shape shape="1" />
+          <Justification Justification="5" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="120">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="258" y="313" width="292" height="202" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>INPUT:HTS</Caption>
+          <Style TextColor="#314c4a" FillColor="#ffffd5" BorderColor="#314c4a" Transparency="25" Margin="10" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="12">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="462" y="342" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="1">R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`</File>
+              <FormatSpecificOptions>
+                <NoProgress>False</NoProgress>
+                <ReadUncommitted>False</ReadUncommitted>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Person Table</AnnotationText>
+              <DefaultAnnotationText>TWB - Trip Linking Analysis_v2016_03_23.mdb
+Table=`2_TWB_PERSONS_2012`</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="PERSID" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="V_WString" />
+                <Field name="PERSIDB" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="V_WString" />
+                <Field name="HHID" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="V_WString" />
+                <Field name="PERSNO" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Byte" />
+                <Field name="AGE" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Byte" />
+                <Field name="AGEGROUP" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Byte" />
+                <Field name="AGEGROUP2" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Byte" />
+                <Field name="SEX" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Byte" />
+                <Field name="RELATIONSHIP" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Byte" />
+                <Field name="COUNTRYCODE" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Byte" />
+                <Field name="CARLICENCE" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Byte" />
+                <Field name="MBIKELICENCE" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Byte" />
+                <Field name="OTHERLICENCE" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Byte" />
+                <Field name="NOLICENCE" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Byte" />
+                <Field name="FULLTIMEWORK" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Byte" />
+                <Field name="PARTTIMEWORK" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Byte" />
+                <Field name="CASUALWORK" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Byte" />
+                <Field name="ANYWORK" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Byte" />
+                <Field name="STUDYING" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Byte" />
+                <Field name="ACTIVITIES" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Byte" />
+                <Field name="MAINACT" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Byte" />
+                <Field name="ANZSCO1" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Int16" />
+                <Field name="ANZSCO2" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Int16" />
+                <Field name="ANZSIC1" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Int16" />
+                <Field name="ANZSIC2" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Int16" />
+                <Field name="STARTPLACE" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Byte" />
+                <Field name="ANYSTOPS" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Int16" />
+                <Field name="NUMSTOPS" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Int16" />
+                <Field name="NUMTRIPS" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Int16" />
+                <Field name="NUMWGTSTOPS" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Int16" />
+                <Field name="NUMWGTTRIPS" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Int16" />
+                <Field name="REASONCODE" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Int16" />
+                <Field name="PRODIST" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Int16" />
+                <Field name="BIKEUSE" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Int16" />
+                <Field name="BIKEFREQ" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Int16" />
+                <Field name="PERSINC" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Int16" />
+                <Field name="WHOFILLED" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Int16" />
+                <Field name="PROXY" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Int16" />
+                <Field name="FILLDOW" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Int16" />
+                <Field name="FILLLAG" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Int16" />
+                <Field name="FILLLAGGRP" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Byte" />
+                <Field name="WGTAREA" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Byte" />
+                <Field name="DEMOGWGT11" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Float" />
+                <Field name="PERSWGT11" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Float" />
+                <Field name="PERSWGT11_DEMOG" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Int32" />
+                <Field name="DEMOGWGT16" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Float" />
+                <Field name="PERSWGT16" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`2_TWB_PERSONS_2012`" type="Float" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="13">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="366" y="342" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="1">R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`1_TWB_HOUSEHOLDS_2012`</File>
+              <FormatSpecificOptions>
+                <NoProgress>False</NoProgress>
+                <ReadUncommitted>False</ReadUncommitted>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>HOUSEHOLD</AnnotationText>
+              <DefaultAnnotationText>TWB - Trip Linking Analysis_v2016_03_23.mdb
+Table=`1_TWB_HOUSEHOLDS_2012`</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="HHID" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`1_TWB_HOUSEHOLDS_2012`" type="V_WString" />
+                <Field name="HHSIZE" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+                <Field name="HHVISITORS" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+                <Field name="HHSTRUCTURE" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+                <Field name="DWELLTYPE" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+                <Field name="OWNDWELL" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+                <Field name="YEARSLIVED" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+                <Field name="MONTHSLIVED" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+                <Field name="BICYCLES" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+                <Field name="CARS" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+                <Field name="FOURWDS" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+                <Field name="MBIKES" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+                <Field name="UTES" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+                <Field name="VANS" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+                <Field name="TRUCKS" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+                <Field name="OTHERVEHS" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+                <Field name="REGVEHS" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+                <Field name="HHINC" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`1_TWB_HOUSEHOLDS_2012`" type="Int16" />
+                <Field name="TRAVDATE" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+                <Field name="TRAVMONTH" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+                <Field name="TRAVYEAR" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`1_TWB_HOUSEHOLDS_2012`" type="Int16" />
+                <Field name="TRAVDOW" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+                <Field name="HOMELONG" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`1_TWB_HOUSEHOLDS_2012`" type="Double" />
+                <Field name="HOMELAT" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`1_TWB_HOUSEHOLDS_2012`" type="Double" />
+                <Field name="HOME_SA1_2011" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`1_TWB_HOUSEHOLDS_2012`" type="Double" />
+                <Field name="HOME_SA1_2016" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`1_TWB_HOUSEHOLDS_2012`" type="Double" />
+                <Field name="WGTREGN" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+                <Field name="HHWGT11" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`1_TWB_HOUSEHOLDS_2012`" type="Float" />
+                <Field name="HHWGT16" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|||`1_TWB_HOUSEHOLDS_2012`" type="Float" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="16">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="268" y="342" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="14">R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\Zone System\SA1_2011.TAB</File>
+              <FormatSpecificOptions>
+                <ReadCentroids>False</ReadCentroids>
+                <NumWarnings>1</NumWarnings>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>SA1_2011</AnnotationText>
+              <DefaultAnnotationText>SA1_2011.TAB</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="SA1_MAINCODE_2011" size="11" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\Zone System\SA1_2011.TAB" type="String" />
+                <Field name="SA1_7DIGITCODE_2011" size="7" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\Zone System\SA1_2011.TAB" type="String" />
+                <Field name="SA2_MAINCODE_2011" size="9" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\Zone System\SA1_2011.TAB" type="String" />
+                <Field name="SA2_5DIGITCODE_2011" size="5" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\Zone System\SA1_2011.TAB" type="String" />
+                <Field name="SA2_NAME_2011" size="50" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\Zone System\SA1_2011.TAB" type="V_String" />
+                <Field name="SA3_CODE_2011" size="5" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\Zone System\SA1_2011.TAB" type="String" />
+                <Field name="SA3_NAME_2011" size="50" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\Zone System\SA1_2011.TAB" type="V_String" />
+                <Field name="SA4_CODE_2011" size="3" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\Zone System\SA1_2011.TAB" type="String" />
+                <Field name="SA4_NAME_2011" size="50" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\Zone System\SA1_2011.TAB" type="V_String" />
+                <Field name="GCCSA_CODE_2011" size="5" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\Zone System\SA1_2011.TAB" type="String" />
+                <Field name="GCCSA_NAME_2011" size="50" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\Zone System\SA1_2011.TAB" type="V_String" />
+                <Field name="EST_POP_06" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\Zone System\SA1_2011.TAB" type="Double" />
+                <Field name="EST_DWLNG_06" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\Zone System\SA1_2011.TAB" type="Double" />
+                <Field name="SpatialObj" size="2147483647" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Inputs\Zone System\SA1_2011.TAB" type="SpatialObj" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="2">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="270" y="414" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`</File>
+              <FormatSpecificOptions>
+                <FirstRowData>False</FirstRowData>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>TwbDemog2016 (zones701)</AnnotationText>
+              <DefaultAnnotationText>Twb_Demog_Zones_2016_701_zones.xlsx
+Table=`Sheet1$`</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="TRSTM_Zone" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="SA1_MAINCODE_2011" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="SA2_MAINCODE_2011" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="SA2_NAME_2011" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Total population" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Total BC Workers" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Total WC Workers" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Total Labour Force" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Total Worker" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Total Dependant" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Total Primary Secondary Enrolement" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Total Primary Secondary Pop" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Total Primary Secondary Att" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Total Jobs" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="WC_Total Jobs" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="BC_Total Jobs" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_0_17" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_5_17" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_18_64" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_18_54" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_55_74" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_75PLUS" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_65PLUS" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Primary_pop" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Secondary_pop" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Post secondary_pop" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_EMPLOYED_0_17" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_EMPLOYED_5_17" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_EMPLOYED_18_64" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_EMPLOYED_18_54" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_EMPLOYED_55_74" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_EMPLOYED_75PLUS" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_EMPLOYED_65PLUS" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Total employed" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_BC_WORKERS_0_17" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_BC_WORKERS_5_17" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_BC_WORKERS_18_64" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_BC_WORKERS_18_54" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_BC_WORKERS_55_74" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_BC_WORKERS_75PLUS" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_BC_WORKERS_65PLUS" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_WC_WORKERS_0_17" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_WC_WORKERS_5_17" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_WC_WORKERS_18_64" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_WC_WORKERS_18_54" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_WC_WORKERS_55_74" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_WC_WORKERS_75PLUS" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_WC_WORKERS_65PLUS" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_LABOUR_FORCE_0_17" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_LABOUR_FORCE_5_17" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_LABOUR_FORCE_18_64" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_LABOUR_FORCE_18_54" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_LABOUR_FORCE_55_74" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_LABOUR_FORCE_75PLUS" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_LABOUR_FORCE_65PLUS" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_DEPENDANTS_0_17" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_DEPENDANTS_5_17" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_DEPENDANTS_18_64" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_DEPENDANTS_18_54" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_DEPENDANTS_55_74" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_DEPENDANTS_75PLUS" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_DEPENDANTS_65PLUS" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_ATT_PRIMARY_EDU" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_ATT_SECONDARY_EDU" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="RES_ATT_POST_SECONDARY_EDU" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="VISITORS_DOMESTIC" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="VISITORS_INTERNATIONAL" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="OCCUPIED_PRIVATE_DWELLINGS" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="ENR_PRIMARY" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="ENR_SECONDARY" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="ENR_TERTIARY" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="BC_Agriculture, Forestry and Fishing" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="BC_Mining" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="BC_Manufacturing" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="BC_Electricity, Gas, Water and Waste Services" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="BC_Construction" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="BC_Wholesale Trade" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="BC_Retail Trade" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="BC_Accommodation and Food Services" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="BC_Transport, Postal and Warehousing" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="BC_Information Media and Telecommunications" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="BC_Financial and Insurance Services" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="BC_Rental, Hiring and Real Estate Services" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="BC_Professional, Scientific and Technical Services" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="BC_Administrative and Support Services" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="BC_Public Administration and Safety" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="BC_Education and Training" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="BC_Health Care and Social Assistance" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="BC_Arts and Recreation Services" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="BC_Other Services" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="WC_Agriculture, Forestry and Fishing" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="WC_Mining" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="WC_Manufacturing" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="WC_Electricity, Gas, Water and Waste Services" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="WC_Construction" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="WC_Wholesale Trade" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="WC_Retail Trade" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="WC_Accommodation and Food Services" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="WC_Transport, Postal and Warehousing" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="WC_Information Media and Telecommunications" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="WC_Financial and Insurance Services" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="WC_Rental, Hiring and Real Estate Services" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="WC_Professional, Scientific and Technical Services" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="WC_Administrative and Support Services" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="WC_Public Administration and Safety" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="WC_Education and Training" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="WC_Health Care and Social Assistance" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="WC_Arts and Recreation Services" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="WC_Other Services" size="255" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="63">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="53.99998" y="738.0001" width="1188" height="888.9999" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Person's detail</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="78">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="1016" y="1074" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="HOME_SA2" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="HOME_SA2" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_HOME_SA2" selected="False" rename="Right_HOME_SA2" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="77">
+          <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+            <Position x="78.99998" y="1150" width="615" height="452" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Caption>Person's detail in weighted HTS</Caption>
+              <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+              <Disabled value="False" />
+              <Folded value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <ChildNodes>
+            <Node ToolID="85">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+                <Position x="608" y="1270" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <FieldType>Numeric</FieldType>
+                  <Fields orderChanged="False">
+                    <Field name="Weighted_Persons" />
+                    <Field name="Weighted_ANYWORK" />
+                    <Field name="Weighted_NOWORK" />
+                    <Field name="Weighted_Male" />
+                    <Field name="Weighted_Female" />
+                    <Field name="Weighted_RES_0_5" />
+                    <Field name="Weighted_RES_5_18" />
+                    <Field name="Weighted_RES_18_64" />
+                    <Field name="Weighted_RES_65_" />
+                    <Field name="*Unknown" />
+                  </Fields>
+                  <CopyOutput value="False" />
+                  <Expression>Round([_CurrentField_], 1)</Expression>
+                  <ChangeFieldType value="True" />
+                  <OutputFieldType type="Int64" size="8" scale="1" />
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <AnnotationText>Rounding</AnnotationText>
+                  <DefaultAnnotationText>Round([_CurrentField_], 1)</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+            </Node>
+            <Node ToolID="76">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.JoinMultiple.JoinMultiple">
+                <Position x="537.0001" y="1270" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <JoinByRecPos value="False" />
+                  <JoinFields>
+                    <JoinInfo connection="#1">
+                      <Field field="HOME_SA2" />
+                    </JoinInfo>
+                    <JoinInfo connection="#2">
+                      <Field field="HOME_SA2" />
+                    </JoinInfo>
+                    <JoinInfo connection="#3">
+                      <Field field="HOME_SA2" />
+                    </JoinInfo>
+                    <JoinInfo connection="#5">
+                      <Field field="HOME_SA2" />
+                    </JoinInfo>
+                  </JoinFields>
+                  <CartesianMode>Error</CartesianMode>
+                  <OutputJoinOnly value="False" />
+                  <SelectConfiguration>
+                    <Configuration outputConnection="Output">
+                      <OrderChanged value="False" />
+                      <SelectFields>
+                        <SelectField field="Input_#2_HOME_SA2" selected="False" />
+                        <SelectField field="Input_#3_HOME_SA2" selected="False" />
+                        <SelectField field="Input_#5_HOME_SA2" selected="False" />
+                        <SelectField field="*Unknown" selected="True" />
+                      </SelectFields>
+                    </Configuration>
+                  </SelectConfiguration>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoinMultiple" />
+            </Node>
+            <Node ToolID="75">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+                <Position x="346.0001" y="1194" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <OrderChanged value="False" />
+                  <SelectFields>
+                    <SelectField field="Sum_PERSWGT11" selected="True" rename="Weighted_Persons" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+            </Node>
+            <Node ToolID="74">
+              <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+                <Position x="188" y="1406" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <SummarizeFields>
+                    <SummarizeField field="HOME_SA2" action="GroupBy" rename="HOME_SA2" />
+                    <SummarizeField field="headers" action="GroupBy" rename="headers" />
+                    <SummarizeField field="PERSWGT11" action="Sum" rename="Sum_PERSWGT11" />
+                  </SummarizeFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+            </Node>
+            <Node ToolID="73">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+                <Position x="104" y="1406" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <FormulaFields>
+                    <FormulaField expression="TOSTRING(FLOOR(([AGE])/10) *10 ) +'-'+ TOSTRING(CEIL(([AGE]+1)/10) *10 )" field="headers" size="1073741823" type="V_WString" />
+                  </FormulaFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <AnnotationText>headers</AnnotationText>
+                  <DefaultAnnotationText>headers = TOSTRING(FLOOR(([AGE])/10) *10 ) +'-'+ TOSTRING(CEIL(([AGE]+1)/10) *10...</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+            </Node>
+            <Node ToolID="72">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+                <Position x="345.0001" y="1410" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <OrderChanged value="False" />
+                  <SelectFields>
+                    <SelectField field="0_10" selected="True" rename="Weighted_Age_Group_0_10" />
+                    <SelectField field="10_20" selected="True" rename="Weighted_Age_Group_10_20" />
+                    <SelectField field="20_30" selected="True" rename="Weighted_Age_Group_20_30" />
+                    <SelectField field="30_40" selected="True" rename="Weighted_Age_Group_30_40" />
+                    <SelectField field="40_50" selected="True" rename="Weighted_Age_Group_40_50" />
+                    <SelectField field="50_60" selected="True" rename="Weighted_Age_Group_50_60" />
+                    <SelectField field="60_70" selected="True" rename="Weighted_Age_Group_60_70" />
+                    <SelectField field="70_80" selected="True" rename="Weighted_Age_Group_70_80" />
+                    <SelectField field="80_90" selected="True" rename="Weighted_Age_Group_80_90" />
+                    <SelectField field="90_100" selected="True" rename="Weighted_Age_Group_90_100" />
+                    <SelectField field="100_110" selected="True" rename="Weighted_Age_Group_100_110" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+            </Node>
+            <Node ToolID="71">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+                <Position x="262" y="1410" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <GroupFields>
+                    <Field field="HOME_SA2" />
+                  </GroupFields>
+                  <HeaderField field="headers" />
+                  <DataField field="Sum_PERSWGT11" />
+                  <Methods>
+                    <Method method="Sum" />
+                  </Methods>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+                <MetaInfo connection="Output">
+                  <RecordInfo>
+                    <Field name="HOME_SA2" size="50" source="CrossTab:Group:Sum:" type="V_String" />
+                    <Field name="0_10" source="CrossTab:Header:headers:0-10:Sum:" type="Double" />
+                    <Field name="10_20" source="CrossTab:Header:headers:10-20:Sum:" type="Double" />
+                    <Field name="20_30" source="CrossTab:Header:headers:20-30:Sum:" type="Double" />
+                    <Field name="30_40" source="CrossTab:Header:headers:30-40:Sum:" type="Double" />
+                    <Field name="40_50" source="CrossTab:Header:headers:40-50:Sum:" type="Double" />
+                    <Field name="50_60" source="CrossTab:Header:headers:50-60:Sum:" type="Double" />
+                    <Field name="60_70" source="CrossTab:Header:headers:60-70:Sum:" type="Double" />
+                    <Field name="70_80" source="CrossTab:Header:headers:70-80:Sum:" type="Double" />
+                    <Field name="80_90" source="CrossTab:Header:headers:80-90:Sum:" type="Double" />
+                    <Field name="90_100" source="CrossTab:Header:headers:90-100:Sum:" type="Double" />
+                    <Field name="100_110" source="CrossTab:Header:headers:100-110:Sum:" type="Double" />
+                  </RecordInfo>
+                  <SortInfo>
+                    <Field field="HOME_SA2" order="Asc" />
+                  </SortInfo>
+                </MetaInfo>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+            </Node>
+            <Node ToolID="70">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+                <Position x="346.0001" y="1267" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <OrderChanged value="False" />
+                  <SelectFields>
+                    <SelectField field="1" selected="True" rename="Weighted_ANYWORK" />
+                    <SelectField field="2" selected="True" rename="Weighted_NOWORK" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+            </Node>
+            <Node ToolID="69">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+                <Position x="190.0003" y="1267" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <GroupFields>
+                    <Field field="HOME_SA2" />
+                  </GroupFields>
+                  <HeaderField field="ANYWORK" />
+                  <DataField field="Sum_PERSWGT11" />
+                  <Methods>
+                    <Method method="Sum" />
+                  </Methods>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+                <MetaInfo connection="Output">
+                  <RecordInfo>
+                    <Field name="HOME_SA2" size="50" source="CrossTab:Group:Sum:" type="V_String" />
+                    <Field name="1" source="CrossTab:Header:ANYWORK:1:Sum:" type="Double" />
+                    <Field name="2" source="CrossTab:Header:ANYWORK:2:Sum:" type="Double" />
+                  </RecordInfo>
+                  <SortInfo>
+                    <Field field="HOME_SA2" order="Asc" />
+                  </SortInfo>
+                </MetaInfo>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+            </Node>
+            <Node ToolID="68">
+              <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+                <Position x="106.0001" y="1267" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <SummarizeFields>
+                    <SummarizeField field="HOME_SA2" action="GroupBy" rename="HOME_SA2" />
+                    <SummarizeField field="ANYWORK" action="GroupBy" rename="ANYWORK" />
+                    <SummarizeField field="PERSWGT11" action="Sum" rename="Sum_PERSWGT11" />
+                  </SummarizeFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+            </Node>
+            <Node ToolID="67">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+                <Position x="346.0001" y="1338" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <OrderChanged value="False" />
+                  <SelectFields>
+                    <SelectField field="1" selected="True" rename="Weighted_Male" />
+                    <SelectField field="2" selected="True" rename="Weighted_Female" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+            </Node>
+            <Node ToolID="66">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+                <Position x="190" y="1338" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <GroupFields>
+                    <Field field="HOME_SA2" />
+                  </GroupFields>
+                  <HeaderField field="SEX" />
+                  <DataField field="Sum_PERSWGT11" />
+                  <Methods>
+                    <Method method="Sum" />
+                  </Methods>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+                <MetaInfo connection="Output">
+                  <RecordInfo>
+                    <Field name="HOME_SA2" size="50" source="CrossTab:Group:Sum:" type="V_String" />
+                    <Field name="1" source="CrossTab:Header:SEX:1:Sum:" type="Double" />
+                    <Field name="2" source="CrossTab:Header:SEX:2:Sum:" type="Double" />
+                  </RecordInfo>
+                  <SortInfo>
+                    <Field field="HOME_SA2" order="Asc" />
+                  </SortInfo>
+                </MetaInfo>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+            </Node>
+            <Node ToolID="65">
+              <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+                <Position x="106.0001" y="1338" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <SummarizeFields>
+                    <SummarizeField field="HOME_SA2" action="GroupBy" rename="HOME_SA2" />
+                    <SummarizeField field="SEX" action="GroupBy" rename="SEX" />
+                    <SummarizeField field="PERSWGT11" action="Sum" rename="Sum_PERSWGT11" />
+                  </SummarizeFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+            </Node>
+            <Node ToolID="64">
+              <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+                <Position x="106.0002" y="1194" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <SummarizeFields>
+                    <SummarizeField field="HOME_SA2" action="GroupBy" rename="HOME_SA2" />
+                    <SummarizeField field="PERSWGT11" action="Sum" rename="Sum_PERSWGT11" />
+                  </SummarizeFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+            </Node>
+            <Node ToolID="109">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+                <Position x="452" y="1502" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <TempFile>C:\Users\mztagha\AppData\Local\Temp\Engine_4300_65c8285b166448abbf2c48bf5c1e106d_\Engine_4624_714e44ba2ddf41999620738fe44499b1_.yxdb</TempFile>
+                  <TempFileDataProfiling />
+                  <Layout>
+                    <ViewMode>Single</ViewMode>
+                    <ViewSize value="100" />
+                    <View1>
+                      <DefaultTab>Profile</DefaultTab>
+                      <Hints>
+                        <Table />
+                      </Hints>
+                    </View1>
+                    <View2 />
+                  </Layout>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+            </Node>
+            <Node ToolID="108">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+                <Position x="344.0001" y="1502" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <OrderChanged value="False" />
+                  <SelectFields>
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+            </Node>
+            <Node ToolID="106">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+                <Position x="260" y="1502" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <GroupFields>
+                    <Field field="HOME_SA2" />
+                  </GroupFields>
+                  <HeaderField field="RES_Category" />
+                  <DataField field="Sum_PERSWGT11" />
+                  <Methods>
+                    <Method method="Sum" />
+                  </Methods>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+                <MetaInfo connection="Output">
+                  <RecordInfo>
+                    <Field name="HOME_SA2" size="50" source="CrossTab:Group:Sum:" type="V_String" />
+                    <Field name="Weighted_RES_0_5" source="CrossTab:Header:RES_Category:Weighted_RES_0-5:Sum:" type="Double" />
+                    <Field name="Weighted_RES_5_18" source="CrossTab:Header:RES_Category:Weighted_RES_5-18:Sum:" type="Double" />
+                    <Field name="Weighted_RES_18_64" source="CrossTab:Header:RES_Category:Weighted_RES_18-64:Sum:" type="Double" />
+                    <Field name="Weighted_RES_65_" source="CrossTab:Header:RES_Category:Weighted_RES_65+:Sum:" type="Double" />
+                  </RecordInfo>
+                  <SortInfo>
+                    <Field field="HOME_SA2" order="Asc" />
+                  </SortInfo>
+                </MetaInfo>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+            </Node>
+            <Node ToolID="107">
+              <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+                <Position x="188.0001" y="1502" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <SummarizeFields>
+                    <SummarizeField field="HOME_SA2" action="GroupBy" rename="HOME_SA2" />
+                    <SummarizeField field="RES_Category" action="GroupBy" rename="RES_Category" />
+                    <SummarizeField field="PERSWGT11" action="Sum" rename="Sum_PERSWGT11" />
+                  </SummarizeFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+            </Node>
+            <Node ToolID="110">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+                <Position x="104" y="1502" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <FormulaFields>
+                    <FormulaField expression="if [AGE]&lt; 5 then 'Weighted_RES_0-5' elseif [AGE]&gt;4 and [AGE]&lt;18 then 'Weighted_RES_5-18' elseif [AGE]&gt;17 and [AGE]&lt;65 then 'Weighted_RES_18-64' elseif [AGE]&gt;64 then 'Weighted_RES_65+'  else null() endif" field="RES_Category" size="2147483647" type="V_String" />
+                  </FormulaFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <AnnotationText>headers</AnnotationText>
+                  <DefaultAnnotationText>RES_Category = if [AGE]&lt; 5 then 'Weighted_RES_0-5' elseif [AGE]&gt;4 and [AGE]&lt;18 t...</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+            </Node>
+          </ChildNodes>
+        </Node>
+        <Node ToolID="116">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1110" y="1074" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="round([Weighted_RES_18_64]/[Weighted_Persons], 0.01)" field="RATIO_WgtRes18-64" size="8" type="Double" />
+                <FormulaField expression="round([Sampled_RES_5_18]/[Sampled_Persons], 0.01)" field="RATIO_SampleRes18-64" size="8" type="Double" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>RATIO_WgtRes18-64 = round([Weighted_RES_18_64]/[Weighted_Persons], 0.01)
+RATIO_S...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="129">
+          <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+            <Position x="79" y="782.0001" width="613.0002" height="351.9999" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Caption>Person's detail in Sampled HTS</Caption>
+              <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+              <Disabled value="False" />
+              <Folded value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <ChildNodes>
+            <Node ToolID="61">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.JoinMultiple.JoinMultiple">
+                <Position x="608.0002" y="898.0003" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <JoinByRecPos value="False" />
+                  <JoinFields>
+                    <JoinInfo connection="#1">
+                      <Field field="HOME_SA2" />
+                    </JoinInfo>
+                    <JoinInfo connection="#2">
+                      <Field field="HOME_SA2" />
+                    </JoinInfo>
+                    <JoinInfo connection="#3">
+                      <Field field="HOME_SA2" />
+                    </JoinInfo>
+                    <JoinInfo connection="#5">
+                      <Field field="HOME_SA2" />
+                    </JoinInfo>
+                  </JoinFields>
+                  <CartesianMode>Error</CartesianMode>
+                  <OutputJoinOnly value="False" />
+                  <SelectConfiguration>
+                    <Configuration outputConnection="Output">
+                      <OrderChanged value="False" />
+                      <SelectFields>
+                        <SelectField field="Input_#2_HOME_SA2" selected="False" />
+                        <SelectField field="Input_#3_HOME_SA2" selected="False" />
+                        <SelectField field="Input_#5_HOME_SA2" selected="False" />
+                        <SelectField field="*Unknown" selected="True" />
+                      </SelectFields>
+                    </Configuration>
+                  </SelectConfiguration>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoinMultiple" />
+            </Node>
+            <Node ToolID="60">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+                <Position x="345.0005" y="826.0003" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <OrderChanged value="False" />
+                  <SelectFields>
+                    <SelectField field="Sum_PERSWGT11" selected="False" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+            </Node>
+            <Node ToolID="47">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+                <Position x="345.0004" y="898.0003" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <OrderChanged value="False" />
+                  <SelectFields>
+                    <SelectField field="1" selected="True" rename="Sampled ANYWORK" />
+                    <SelectField field="2" selected="True" rename="Sampled NOWORK" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+            </Node>
+            <Node ToolID="46">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+                <Position x="189.0001" y="898.0003" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <GroupFields>
+                    <Field field="HOME_SA2" />
+                  </GroupFields>
+                  <HeaderField field="ANYWORK" />
+                  <DataField field="CountDistinctNonNull_PERSID" />
+                  <Methods>
+                    <Method method="Sum" />
+                  </Methods>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+                <MetaInfo connection="Output">
+                  <RecordInfo>
+                    <Field name="HOME_SA2" size="50" source="CrossTab:Group:Sum:" type="V_String" />
+                    <Field name="1" source="CrossTab:Header:ANYWORK:1:Sum:" type="Int64" />
+                    <Field name="2" source="CrossTab:Header:ANYWORK:2:Sum:" type="Int64" />
+                  </RecordInfo>
+                  <SortInfo>
+                    <Field field="HOME_SA2" order="Asc" />
+                  </SortInfo>
+                </MetaInfo>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+            </Node>
+            <Node ToolID="45">
+              <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+                <Position x="104.9998" y="898.0003" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <SummarizeFields>
+                    <SummarizeField field="HOME_SA2" action="GroupBy" rename="HOME_SA2" />
+                    <SummarizeField field="ANYWORK" action="GroupBy" rename="ANYWORK" />
+                    <SummarizeField field="PERSID" action="CountDistinctNonNull" rename="CountDistinctNonNull_PERSID" />
+                  </SummarizeFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+            </Node>
+            <Node ToolID="44">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+                <Position x="345.0004" y="970.0001" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <OrderChanged value="False" />
+                  <SelectFields>
+                    <SelectField field="1" selected="True" rename="Sampled Male" />
+                    <SelectField field="2" selected="True" rename="Sampled Female" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+            </Node>
+            <Node ToolID="43">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+                <Position x="189.0003" y="970.0001" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <GroupFields>
+                    <Field field="HOME_SA2" />
+                  </GroupFields>
+                  <HeaderField field="SEX" />
+                  <DataField field="CountDistinctNonNull_PERSID" />
+                  <Methods>
+                    <Method method="Sum" />
+                  </Methods>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+                <MetaInfo connection="Output">
+                  <RecordInfo>
+                    <Field name="HOME_SA2" size="50" source="CrossTab:Group:Sum:" type="V_String" />
+                    <Field name="1" source="CrossTab:Header:SEX:1:Sum:" type="Int64" />
+                    <Field name="2" source="CrossTab:Header:SEX:2:Sum:" type="Int64" />
+                  </RecordInfo>
+                  <SortInfo>
+                    <Field field="HOME_SA2" order="Asc" />
+                  </SortInfo>
+                </MetaInfo>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+            </Node>
+            <Node ToolID="42">
+              <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+                <Position x="105.0002" y="970.0001" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <SummarizeFields>
+                    <SummarizeField field="HOME_SA2" action="GroupBy" rename="HOME_SA2" />
+                    <SummarizeField field="SEX" action="GroupBy" rename="SEX" />
+                    <SummarizeField field="PERSID" action="CountDistinctNonNull" rename="CountDistinctNonNull_PERSID" />
+                  </SummarizeFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+            </Node>
+            <Node ToolID="20">
+              <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+                <Position x="105" y="826.0001" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <SummarizeFields>
+                    <SummarizeField field="HOME_SA2" action="GroupBy" rename="HOME_SA2" />
+                    <SummarizeField field="PERSWGT11" action="Sum" rename="Sum_PERSWGT11" />
+                    <SummarizeField field="PERSID" action="CountDistinctNonNull" rename="Sampled_Persons" />
+                  </SummarizeFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+            </Node>
+            <Node ToolID="102">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+                <Position x="284.0002" y="1034" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <GroupFields>
+                    <Field field="HOME_SA2" />
+                  </GroupFields>
+                  <HeaderField field="RES_Category" />
+                  <DataField field="CountDistinctNonNull_PERSID" />
+                  <Methods>
+                    <Method method="Sum" />
+                  </Methods>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+                <MetaInfo connection="Output">
+                  <RecordInfo>
+                    <Field name="HOME_SA2" size="50" source="CrossTab:Group:Sum:" type="V_String" />
+                    <Field name="Sampled_RES_0_5" source="CrossTab:Header:RES_Category:Sampled_RES_0-5:Sum:" type="Int64" />
+                    <Field name="Sampled_RES_5_18" source="CrossTab:Header:RES_Category:Sampled_RES_5-18:Sum:" type="Int64" />
+                    <Field name="Sampled_RES_18_64" source="CrossTab:Header:RES_Category:Sampled_RES_18-64:Sum:" type="Int64" />
+                    <Field name="Sampled_RES_65_" source="CrossTab:Header:RES_Category:Sampled_RES_65+:Sum:" type="Int64" />
+                  </RecordInfo>
+                  <SortInfo>
+                    <Field field="HOME_SA2" order="Asc" />
+                  </SortInfo>
+                </MetaInfo>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+            </Node>
+            <Node ToolID="103">
+              <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+                <Position x="188.0001" y="1034" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <SummarizeFields>
+                    <SummarizeField field="HOME_SA2" action="GroupBy" rename="HOME_SA2" />
+                    <SummarizeField field="RES_Category" action="GroupBy" rename="RES_Category" />
+                    <SummarizeField field="PERSID" action="CountDistinctNonNull" rename="CountDistinctNonNull_PERSID" />
+                    <SummarizeField field="PERSWGT11" action="Sum" rename="Sum_PERSWGT11" />
+                  </SummarizeFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+            </Node>
+            <Node ToolID="104">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+                <Position x="345.0004" y="1034" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <OrderChanged value="False" />
+                  <SelectFields>
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+            </Node>
+            <Node ToolID="101">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+                <Position x="104.0001" y="1034" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <FormulaFields>
+                    <FormulaField expression="if [AGE]&lt; 5 then 'Sampled_RES_0-5' elseif [AGE]&gt;4 and [AGE]&lt;18 then 'Sampled_RES_5-18' elseif [AGE]&gt;17 and [AGE]&lt;65 then 'Sampled_RES_18-64' elseif [AGE]&gt;64 then 'Sampled_RES_65+'  else null() endif" field="RES_Category" size="2147483647" type="V_String" />
+                  </FormulaFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <AnnotationText>headers</AnnotationText>
+                  <DefaultAnnotationText>RES_Category = if [AGE]&lt; 5 then 'Sampled_RES_0-5' elseif [AGE]&gt;4 and [AGE]&lt;18 th...</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+            </Node>
+          </ChildNodes>
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="119">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="726" y="534" width="518" height="130" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Demographics</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="10" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="4">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="952" y="563" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="SA2_NAME_2011" action="GroupBy" rename="SA2_NAME_2011" />
+                <SummarizeField field="Total population" action="Sum" rename="Total population" />
+                <SummarizeField field="Total Worker" action="Sum" rename="Total Worker(emp)" />
+                <SummarizeField field="Total BC Workers" action="Sum" rename="Sum_Total BC Workers" />
+                <SummarizeField field="Total WC Workers" action="Sum" rename="Sum_Total WC Workers" />
+                <SummarizeField field="Total Labour Force" action="Sum" rename="Sum_Total Labour Force" />
+                <SummarizeField field="Total employed" action="Sum" rename="Sum_Total employed" />
+                <SummarizeField field="Total Dependant" action="Sum" rename="Sum_Total Dependant" />
+                <SummarizeField field="Total Primary Secondary Enrolement" action="Sum" rename="Sum_Total Primary Secondary Enrolement" />
+                <SummarizeField field="Total Jobs" action="Sum" rename="Sum_Total Jobs" />
+                <SummarizeField field="WC_Total Jobs" action="Sum" rename="Sum_WC_Total Jobs" />
+                <SummarizeField field="BC_Total Jobs" action="Sum" rename="Sum_BC_Total Jobs" />
+                <SummarizeField field="RES_0_17" action="Sum" rename="Sum_RES_0_17" />
+                <SummarizeField field="RES_5_17" action="Sum" rename="Sum_RES_5_17" />
+                <SummarizeField field="RES_18_64" action="Sum" rename="Sum_RES_18_64" />
+                <SummarizeField field="RES_65PLUS" action="Sum" rename="Sum_RES_65PLUS" />
+                <SummarizeField field="VISITORS_DOMESTIC" action="Sum" rename="Sum_VISITORS_DOMESTIC" />
+                <SummarizeField field="VISITORS_INTERNATIONAL" action="Sum" rename="Sum_VISITORS_INTERNATIONAL" />
+                <SummarizeField field="OCCUPIED_PRIVATE_DWELLINGS" action="Sum" rename="Sum_OCCUPIED_PRIVATE_DWELLINGS" />
+                <SummarizeField field="ENR_PRIMARY" action="Sum" rename="Sum_ENR_PRIMARY" />
+                <SummarizeField field="ENR_SECONDARY" action="Sum" rename="Sum_ENR_SECONDARY" />
+                <SummarizeField field="ENR_TERTIARY" action="Sum" rename="Sum_ENR_TERTIARY" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="8">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1144" y="563" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="round([Total Worker(emp)]/[Total population],0.01)" field="employment_ratio" size="1073741823" type="V_WString" />
+                <FormulaField expression="round([BC_Total Jobs]/ [Total Jobs],0.01)" field="BC_Jobs_ratio" size="1073741823" type="V_WString" />
+                <FormulaField expression="round([Total BC Workers]/ [Total Worker(emp)],0.01)" field="BC_Workers_ratio" size="1073741823" type="V_WString" />
+                <FormulaField expression="round([Total Primary Secondary Enrolement]/ [Total population],0.01)" field="School_erolement_ratio(toPop)" size="1073741823" type="V_WString" />
+                <FormulaField expression="Round([RES_5_17]/[Total population],0.01)" field="RES_5-17 Ratio(toPop)" size="1073741823" type="V_WString" />
+                <FormulaField expression="Round([RES_18_64]/[Total population],0.01)" field="RES_18-64 Ratio(toPop)" size="1073741823" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Calculating the ratios</AnnotationText>
+              <DefaultAnnotationText>employment_ratio = round([Total Worker(emp)]/[Total population],0.01)
+BC_Jobs_ra...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="25">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="832" y="563" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="True" />
+              <SelectFields>
+                <SelectField field="TRSTM_Zone" selected="True" type="String" size="5" />
+                <SelectField field="SA1_MAINCODE_2011" selected="True" />
+                <SelectField field="SA2_MAINCODE_2011" selected="True" />
+                <SelectField field="SA2_NAME_2011" selected="True" />
+                <SelectField field="Total population" selected="True" />
+                <SelectField field="Total BC Workers" selected="True" />
+                <SelectField field="Total WC Workers" selected="True" />
+                <SelectField field="Total Labour Force" selected="True" />
+                <SelectField field="Total Worker" selected="True" />
+                <SelectField field="Total employed" selected="True" />
+                <SelectField field="Total Dependant" selected="True" />
+                <SelectField field="Total Primary Secondary Enrolement" selected="True" />
+                <SelectField field="Total Primary Secondary Pop" selected="True" />
+                <SelectField field="Total Primary Secondary Att" selected="True" />
+                <SelectField field="Total Jobs" selected="True" />
+                <SelectField field="WC_Total Jobs" selected="True" />
+                <SelectField field="BC_Total Jobs" selected="True" />
+                <SelectField field="RES_0_17" selected="True" />
+                <SelectField field="RES_5_17" selected="True" />
+                <SelectField field="RES_18_64" selected="True" />
+                <SelectField field="RES_18_54" selected="False" />
+                <SelectField field="RES_55_74" selected="False" />
+                <SelectField field="RES_75PLUS" selected="False" />
+                <SelectField field="RES_65PLUS" selected="True" />
+                <SelectField field="Primary_pop" selected="False" />
+                <SelectField field="Secondary_pop" selected="False" />
+                <SelectField field="Post secondary_pop" selected="False" />
+                <SelectField field="RES_EMPLOYED_0_17" selected="False" />
+                <SelectField field="RES_EMPLOYED_5_17" selected="False" />
+                <SelectField field="RES_EMPLOYED_18_64" selected="False" />
+                <SelectField field="RES_EMPLOYED_18_54" selected="False" />
+                <SelectField field="RES_EMPLOYED_55_74" selected="False" />
+                <SelectField field="RES_EMPLOYED_75PLUS" selected="False" />
+                <SelectField field="RES_EMPLOYED_65PLUS" selected="False" />
+                <SelectField field="RES_BC_WORKERS_0_17" selected="False" />
+                <SelectField field="RES_BC_WORKERS_5_17" selected="False" />
+                <SelectField field="RES_BC_WORKERS_18_64" selected="False" />
+                <SelectField field="RES_BC_WORKERS_18_54" selected="False" />
+                <SelectField field="RES_BC_WORKERS_55_74" selected="False" />
+                <SelectField field="RES_BC_WORKERS_75PLUS" selected="False" />
+                <SelectField field="RES_BC_WORKERS_65PLUS" selected="False" />
+                <SelectField field="RES_WC_WORKERS_0_17" selected="False" />
+                <SelectField field="RES_WC_WORKERS_5_17" selected="False" />
+                <SelectField field="RES_WC_WORKERS_18_64" selected="False" />
+                <SelectField field="RES_WC_WORKERS_18_54" selected="False" />
+                <SelectField field="RES_WC_WORKERS_55_74" selected="False" />
+                <SelectField field="RES_WC_WORKERS_75PLUS" selected="False" />
+                <SelectField field="RES_WC_WORKERS_65PLUS" selected="False" />
+                <SelectField field="RES_LABOUR_FORCE_0_17" selected="False" />
+                <SelectField field="RES_LABOUR_FORCE_5_17" selected="False" />
+                <SelectField field="RES_LABOUR_FORCE_18_64" selected="False" />
+                <SelectField field="RES_LABOUR_FORCE_18_54" selected="False" />
+                <SelectField field="RES_LABOUR_FORCE_55_74" selected="False" />
+                <SelectField field="RES_LABOUR_FORCE_75PLUS" selected="False" />
+                <SelectField field="RES_LABOUR_FORCE_65PLUS" selected="False" />
+                <SelectField field="RES_DEPENDANTS_0_17" selected="False" />
+                <SelectField field="RES_DEPENDANTS_5_17" selected="False" />
+                <SelectField field="RES_DEPENDANTS_18_64" selected="False" />
+                <SelectField field="RES_DEPENDANTS_18_54" selected="False" />
+                <SelectField field="RES_DEPENDANTS_55_74" selected="False" />
+                <SelectField field="RES_DEPENDANTS_75PLUS" selected="False" />
+                <SelectField field="RES_DEPENDANTS_65PLUS" selected="False" />
+                <SelectField field="RES_ATT_PRIMARY_EDU" selected="False" />
+                <SelectField field="RES_ATT_SECONDARY_EDU" selected="False" />
+                <SelectField field="RES_ATT_POST_SECONDARY_EDU" selected="False" />
+                <SelectField field="VISITORS_DOMESTIC" selected="True" />
+                <SelectField field="VISITORS_INTERNATIONAL" selected="True" />
+                <SelectField field="OCCUPIED_PRIVATE_DWELLINGS" selected="True" />
+                <SelectField field="ENR_PRIMARY" selected="True" />
+                <SelectField field="ENR_SECONDARY" selected="True" />
+                <SelectField field="ENR_TERTIARY" selected="True" />
+                <SelectField field="BC_Agriculture, Forestry and Fishing" selected="False" />
+                <SelectField field="BC_Mining" selected="False" />
+                <SelectField field="BC_Manufacturing" selected="False" />
+                <SelectField field="BC_Electricity, Gas, Water and Waste Services" selected="False" />
+                <SelectField field="BC_Construction" selected="False" />
+                <SelectField field="BC_Wholesale Trade" selected="False" />
+                <SelectField field="BC_Retail Trade" selected="False" />
+                <SelectField field="BC_Accommodation and Food Services" selected="False" />
+                <SelectField field="BC_Transport, Postal and Warehousing" selected="False" />
+                <SelectField field="BC_Information Media and Telecommunications" selected="False" />
+                <SelectField field="BC_Financial and Insurance Services" selected="False" />
+                <SelectField field="BC_Rental, Hiring and Real Estate Services" selected="False" />
+                <SelectField field="BC_Professional, Scientific and Technical Services" selected="False" />
+                <SelectField field="BC_Administrative and Support Services" selected="False" />
+                <SelectField field="BC_Public Administration and Safety" selected="False" />
+                <SelectField field="BC_Education and Training" selected="False" />
+                <SelectField field="BC_Health Care and Social Assistance" selected="False" />
+                <SelectField field="BC_Arts and Recreation Services" selected="False" />
+                <SelectField field="BC_Other Services" selected="False" />
+                <SelectField field="WC_Agriculture, Forestry and Fishing" selected="False" />
+                <SelectField field="WC_Mining" selected="False" />
+                <SelectField field="WC_Manufacturing" selected="False" />
+                <SelectField field="WC_Electricity, Gas, Water and Waste Services" selected="False" />
+                <SelectField field="WC_Construction" selected="False" />
+                <SelectField field="WC_Wholesale Trade" selected="False" />
+                <SelectField field="WC_Retail Trade" selected="False" />
+                <SelectField field="WC_Accommodation and Food Services" selected="False" />
+                <SelectField field="WC_Transport, Postal and Warehousing" selected="False" />
+                <SelectField field="WC_Information Media and Telecommunications" selected="False" />
+                <SelectField field="WC_Financial and Insurance Services" selected="False" />
+                <SelectField field="WC_Rental, Hiring and Real Estate Services" selected="False" />
+                <SelectField field="WC_Professional, Scientific and Technical Services" selected="False" />
+                <SelectField field="WC_Administrative and Support Services" selected="False" />
+                <SelectField field="WC_Public Administration and Safety" selected="False" />
+                <SelectField field="WC_Education and Training" selected="False" />
+                <SelectField field="WC_Health Care and Social Assistance" selected="False" />
+                <SelectField field="WC_Arts and Recreation Services" selected="False" />
+                <SelectField field="WC_Other Services" selected="False" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="35">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+            <Position x="736" y="563" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Fields>
+                <Field field="TRSTM_Zone" selected="True" />
+                <Field field="SA1_MAINCODE_2011" selected="True" />
+                <Field field="SA2_MAINCODE_2011" selected="True" />
+                <Field field="SA2_NAME_2011" selected="True" />
+                <Field field="Total population" selected="True" />
+                <Field field="Total BC Workers" selected="True" />
+                <Field field="Total WC Workers" selected="True" />
+                <Field field="Total Labour Force" selected="True" />
+                <Field field="Total Worker" selected="True" />
+                <Field field="Total Dependant" selected="True" />
+                <Field field="Total Primary Secondary Enrolement" selected="True" />
+                <Field field="Total Primary Secondary Pop" selected="True" />
+                <Field field="Total Primary Secondary Att" selected="True" />
+                <Field field="Total Jobs" selected="True" />
+                <Field field="WC_Total Jobs" selected="True" />
+                <Field field="BC_Total Jobs" selected="True" />
+                <Field field="RES_0_17" selected="True" />
+                <Field field="RES_5_17" selected="True" />
+                <Field field="RES_18_64" selected="True" />
+                <Field field="RES_18_54" selected="True" />
+                <Field field="RES_55_74" selected="True" />
+                <Field field="RES_75PLUS" selected="True" />
+                <Field field="RES_65PLUS" selected="True" />
+                <Field field="Primary_pop" selected="True" />
+                <Field field="Secondary_pop" selected="True" />
+                <Field field="Post secondary_pop" selected="True" />
+                <Field field="RES_EMPLOYED_0_17" selected="True" />
+                <Field field="RES_EMPLOYED_5_17" selected="True" />
+                <Field field="RES_EMPLOYED_18_64" selected="True" />
+                <Field field="RES_EMPLOYED_18_54" selected="True" />
+                <Field field="RES_EMPLOYED_55_74" selected="True" />
+                <Field field="RES_EMPLOYED_75PLUS" selected="True" />
+                <Field field="RES_EMPLOYED_65PLUS" selected="True" />
+                <Field field="Total employed" selected="True" />
+                <Field field="RES_BC_WORKERS_0_17" selected="True" />
+                <Field field="RES_BC_WORKERS_5_17" selected="True" />
+                <Field field="RES_BC_WORKERS_18_64" selected="True" />
+                <Field field="RES_BC_WORKERS_18_54" selected="True" />
+                <Field field="RES_BC_WORKERS_55_74" selected="True" />
+                <Field field="RES_BC_WORKERS_75PLUS" selected="True" />
+                <Field field="RES_BC_WORKERS_65PLUS" selected="True" />
+                <Field field="RES_WC_WORKERS_0_17" selected="True" />
+                <Field field="RES_WC_WORKERS_5_17" selected="True" />
+                <Field field="RES_WC_WORKERS_18_64" selected="True" />
+                <Field field="RES_WC_WORKERS_18_54" selected="True" />
+                <Field field="RES_WC_WORKERS_55_74" selected="True" />
+                <Field field="RES_WC_WORKERS_75PLUS" selected="True" />
+                <Field field="RES_WC_WORKERS_65PLUS" selected="True" />
+                <Field field="RES_LABOUR_FORCE_0_17" selected="True" />
+                <Field field="RES_LABOUR_FORCE_5_17" selected="True" />
+                <Field field="RES_LABOUR_FORCE_18_64" selected="True" />
+                <Field field="RES_LABOUR_FORCE_18_54" selected="True" />
+                <Field field="RES_LABOUR_FORCE_55_74" selected="True" />
+                <Field field="RES_LABOUR_FORCE_75PLUS" selected="True" />
+                <Field field="RES_LABOUR_FORCE_65PLUS" selected="True" />
+                <Field field="RES_DEPENDANTS_0_17" selected="True" />
+                <Field field="RES_DEPENDANTS_5_17" selected="True" />
+                <Field field="RES_DEPENDANTS_18_64" selected="True" />
+                <Field field="RES_DEPENDANTS_18_54" selected="True" />
+                <Field field="RES_DEPENDANTS_55_74" selected="True" />
+                <Field field="RES_DEPENDANTS_75PLUS" selected="True" />
+                <Field field="RES_DEPENDANTS_65PLUS" selected="True" />
+                <Field field="RES_ATT_PRIMARY_EDU" selected="True" />
+                <Field field="RES_ATT_SECONDARY_EDU" selected="True" />
+                <Field field="RES_ATT_POST_SECONDARY_EDU" selected="True" />
+                <Field field="VISITORS_DOMESTIC" selected="True" />
+                <Field field="VISITORS_INTERNATIONAL" selected="True" />
+                <Field field="OCCUPIED_PRIVATE_DWELLINGS" selected="True" />
+                <Field field="ENR_PRIMARY" selected="True" />
+                <Field field="ENR_SECONDARY" selected="True" />
+                <Field field="ENR_TERTIARY" selected="True" />
+                <Field field="BC_Agriculture, Forestry and Fishing" selected="True" />
+                <Field field="BC_Mining" selected="True" />
+                <Field field="BC_Manufacturing" selected="True" />
+                <Field field="BC_Electricity, Gas, Water and Waste Services" selected="True" />
+                <Field field="BC_Construction" selected="True" />
+                <Field field="BC_Wholesale Trade" selected="True" />
+                <Field field="BC_Retail Trade" selected="True" />
+                <Field field="BC_Accommodation and Food Services" selected="True" />
+                <Field field="BC_Transport, Postal and Warehousing" selected="True" />
+                <Field field="BC_Information Media and Telecommunications" selected="True" />
+                <Field field="BC_Financial and Insurance Services" selected="True" />
+                <Field field="BC_Rental, Hiring and Real Estate Services" selected="True" />
+                <Field field="BC_Professional, Scientific and Technical Services" selected="True" />
+                <Field field="BC_Administrative and Support Services" selected="True" />
+                <Field field="BC_Public Administration and Safety" selected="True" />
+                <Field field="BC_Education and Training" selected="True" />
+                <Field field="BC_Health Care and Social Assistance" selected="True" />
+                <Field field="BC_Arts and Recreation Services" selected="True" />
+                <Field field="BC_Other Services" selected="True" />
+                <Field field="WC_Agriculture, Forestry and Fishing" selected="True" />
+                <Field field="WC_Mining" selected="True" />
+                <Field field="WC_Manufacturing" selected="True" />
+                <Field field="WC_Electricity, Gas, Water and Waste Services" selected="True" />
+                <Field field="WC_Construction" selected="True" />
+                <Field field="WC_Wholesale Trade" selected="True" />
+                <Field field="WC_Retail Trade" selected="True" />
+                <Field field="WC_Accommodation and Food Services" selected="True" />
+                <Field field="WC_Transport, Postal and Warehousing" selected="True" />
+                <Field field="WC_Information Media and Telecommunications" selected="True" />
+                <Field field="WC_Financial and Insurance Services" selected="True" />
+                <Field field="WC_Rental, Hiring and Real Estate Services" selected="True" />
+                <Field field="WC_Professional, Scientific and Technical Services" selected="True" />
+                <Field field="WC_Administrative and Support Services" selected="True" />
+                <Field field="WC_Public Administration and Safety" selected="True" />
+                <Field field="WC_Education and Training" selected="True" />
+                <Field field="WC_Health Care and Social Assistance" selected="True" />
+                <Field field="WC_Arts and Recreation Services" selected="True" />
+                <Field field="WC_Other Services" selected="True" />
+                <Field field="*Unknown" selected="True" />
+              </Fields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="TRSTM_Zone" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="SA1_MAINCODE_2011" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int64" />
+                <Field name="SA2_MAINCODE_2011" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int32" />
+                <Field name="SA2_NAME_2011" size="27" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Total population" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="Total BC Workers" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="Total WC Workers" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="Total Labour Force" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="Total Worker" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="Total Dependant" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="Total Primary Secondary Enrolement" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="Total Primary Secondary Pop" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="Total Primary Secondary Att" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="Total Jobs" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="WC_Total Jobs" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="BC_Total Jobs" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="RES_0_17" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="RES_5_17" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="RES_18_64" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="RES_18_54" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="RES_55_74" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="RES_75PLUS" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="RES_65PLUS" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="Primary_pop" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="Secondary_pop" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="Post secondary_pop" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="RES_EMPLOYED_0_17" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="RES_EMPLOYED_5_17" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="RES_EMPLOYED_18_64" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="RES_EMPLOYED_18_54" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="RES_EMPLOYED_55_74" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="RES_EMPLOYED_75PLUS" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="RES_EMPLOYED_65PLUS" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="Total employed" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="RES_BC_WORKERS_0_17" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="RES_BC_WORKERS_5_17" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="RES_BC_WORKERS_18_64" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="RES_BC_WORKERS_18_54" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="RES_BC_WORKERS_55_74" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="RES_BC_WORKERS_75PLUS" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="RES_BC_WORKERS_65PLUS" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="RES_WC_WORKERS_0_17" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="RES_WC_WORKERS_5_17" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="RES_WC_WORKERS_18_64" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="RES_WC_WORKERS_18_54" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="RES_WC_WORKERS_55_74" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="RES_WC_WORKERS_75PLUS" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="RES_WC_WORKERS_65PLUS" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="RES_LABOUR_FORCE_0_17" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="RES_LABOUR_FORCE_5_17" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="RES_LABOUR_FORCE_18_64" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="RES_LABOUR_FORCE_18_54" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="RES_LABOUR_FORCE_55_74" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="RES_LABOUR_FORCE_75PLUS" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="RES_LABOUR_FORCE_65PLUS" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="RES_DEPENDANTS_0_17" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="RES_DEPENDANTS_5_17" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="RES_DEPENDANTS_18_64" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="RES_DEPENDANTS_18_54" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="RES_DEPENDANTS_55_74" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="RES_DEPENDANTS_75PLUS" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="RES_DEPENDANTS_65PLUS" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="RES_ATT_PRIMARY_EDU" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="RES_ATT_SECONDARY_EDU" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="RES_ATT_POST_SECONDARY_EDU" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="VISITORS_DOMESTIC" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="VISITORS_INTERNATIONAL" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="OCCUPIED_PRIVATE_DWELLINGS" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="ENR_PRIMARY" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="ENR_SECONDARY" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="ENR_TERTIARY" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="BC_Agriculture, Forestry and Fishing" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="BC_Mining" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="BC_Manufacturing" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="BC_Electricity, Gas, Water and Waste Services" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="BC_Construction" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="BC_Wholesale Trade" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="BC_Retail Trade" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="BC_Accommodation and Food Services" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="BC_Transport, Postal and Warehousing" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="BC_Information Media and Telecommunications" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="BC_Financial and Insurance Services" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="BC_Rental, Hiring and Real Estate Services" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="BC_Professional, Scientific and Technical Services" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="BC_Administrative and Support Services" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="BC_Public Administration and Safety" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="BC_Education and Training" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="BC_Health Care and Social Assistance" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="BC_Arts and Recreation Services" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="BC_Other Services" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="WC_Agriculture, Forestry and Fishing" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="WC_Mining" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="WC_Manufacturing" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="WC_Electricity, Gas, Water and Waste Services" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="WC_Construction" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="WC_Wholesale Trade" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="WC_Retail Trade" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="WC_Accommodation and Food Services" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="WC_Transport, Postal and Warehousing" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="WC_Information Media and Telecommunications" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="WC_Financial and Insurance Services" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="WC_Rental, Hiring and Real Estate Services" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="WC_Professional, Scientific and Technical Services" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="WC_Administrative and Support Services" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="WC_Public Administration and Safety" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="WC_Education and Training" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="WC_Health Care and Social Assistance" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Int16" />
+                <Field name="WC_Arts and Recreation Services" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+                <Field name="WC_Other Services" source="File: R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\Demography\3.Alteryx Output\Twb_Demog_Zones_2016_701_zones.xlsx|||`Sheet1$`" type="Byte" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+        </Node>
+        <Node ToolID="100">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DynamicRename.DynamicRename">
+            <Position x="1048" y="563" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <RenameMode>Remove</RenameMode>
+              <Fields orderChanged="False">
+                <Field name="SA2_NAME_2011" />
+                <Field name="Total population" />
+                <Field name="Total Worker(emp)" />
+                <Field name="Sum_Total BC Workers" />
+                <Field name="Sum_Total WC Workers" />
+                <Field name="Sum_Total Labour Force" />
+                <Field name="Sum_Total employed" />
+                <Field name="Sum_Total Dependant" />
+                <Field name="Sum_Total Primary Secondary Enrolement" />
+                <Field name="Sum_Total Primary Secondary Pop" />
+                <Field name="Sum_Total Primary Secondary Att" />
+                <Field name="Sum_Total Jobs" />
+                <Field name="Sum_WC_Total Jobs" />
+                <Field name="Sum_BC_Total Jobs" />
+                <Field name="Sum_RES_0_17" />
+                <Field name="Sum_RES_5_17" />
+                <Field name="Sum_RES_18_64" />
+                <Field name="Sum_RES_65PLUS" />
+                <Field name="Sum_VISITORS_DOMESTIC" />
+                <Field name="Sum_VISITORS_INTERNATIONAL" />
+                <Field name="Sum_OCCUPIED_PRIVATE_DWELLINGS" />
+                <Field name="Sum_ENR_PRIMARY" />
+                <Field name="Sum_ENR_SECONDARY" />
+                <Field name="Sum_ENR_TERTIARY" />
+                <Field name="*Unknown" />
+              </Fields>
+              <Expression />
+              <RemovePrefixSuffix>
+                <Type>Prefix</Type>
+                <Text>Sum_</Text>
+                <OnError>Ignore</OnError>
+              </RemovePrefixSuffix>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="SA2_NAME_2011" size="27" source="Summarize: GroupBy - SA2_NAME_2011" type="V_String" />
+                <Field name="Total population" source="Summarize: Sum - Total population" type="Int64" />
+                <Field name="Total Worker(emp)" source="Summarize: Sum - Total Worker" type="Int64" />
+                <Field name="Total BC Workers" source="Summarize: Sum - Total BC Workers" type="Int64" />
+                <Field name="Total WC Workers" source="Summarize: Sum - Total WC Workers" type="Int64" />
+                <Field name="Total Labour Force" source="Summarize: Sum - Total Labour Force" type="Int64" />
+                <Field name="Total employed" source="Summarize: Sum - Total employed" type="Int64" />
+                <Field name="Total Dependant" source="Summarize: Sum - Total Dependant" type="Int64" />
+                <Field name="Total Primary Secondary Enrolement" source="Summarize: Sum - Total Primary Secondary Enrolement" type="Int64" />
+                <Field name="Total Jobs" source="Summarize: Sum - Total Jobs" type="Int64" />
+                <Field name="WC_Total Jobs" source="Summarize: Sum - WC_Total Jobs" type="Int64" />
+                <Field name="BC_Total Jobs" source="Summarize: Sum - BC_Total Jobs" type="Int64" />
+                <Field name="RES_0_17" source="Summarize: Sum - RES_0_17" type="Int64" />
+                <Field name="RES_5_17" source="Summarize: Sum - RES_5_17" type="Int64" />
+                <Field name="RES_18_64" source="Summarize: Sum - RES_18_64" type="Int64" />
+                <Field name="RES_65PLUS" source="Summarize: Sum - RES_65PLUS" type="Int64" />
+                <Field name="VISITORS_DOMESTIC" source="Summarize: Sum - VISITORS_DOMESTIC" type="Int64" />
+                <Field name="VISITORS_INTERNATIONAL" source="Summarize: Sum - VISITORS_INTERNATIONAL" type="Int64" />
+                <Field name="OCCUPIED_PRIVATE_DWELLINGS" source="Summarize: Sum - OCCUPIED_PRIVATE_DWELLINGS" type="Int64" />
+                <Field name="ENR_PRIMARY" source="Summarize: Sum - ENR_PRIMARY" type="Int64" />
+                <Field name="ENR_SECONDARY" source="Summarize: Sum - ENR_SECONDARY" type="Int64" />
+                <Field name="ENR_TERTIARY" source="Summarize: Sum - ENR_TERTIARY" type="Int64" />
+              </RecordInfo>
+              <SortInfo>
+                <Field field="SA2_NAME_2011" order="Asc" />
+              </SortInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDynamicRename" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="118">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="54.00003" y="534" width="611" height="188.0001" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>HTS HH SIZE</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="86">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="79.00003" y="613.9998" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="SA2_NAME_2011" action="GroupBy" rename="SA2_NAME_2011" />
+                <SummarizeField field="HHSIZE" action="GroupBy" rename="HHSIZE" />
+                <SummarizeField field="HHID" action="CountDistinctNonNull" rename="CountDistinctNonNull_HHID" />
+                <SummarizeField field="HHWGT11" action="Sum" rename="Sum_HHWGT11" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="89">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="247" y="578.0001" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <SelectFields>
+                <SelectField field="Sum_HHWGT11" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="90">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+            <Position x="343" y="578" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <GroupFields>
+                <Field field="SA2_NAME_2011" />
+              </GroupFields>
+              <HeaderField field="hh" />
+              <DataField field="CountDistinctNonNull_HHID" />
+              <Methods>
+                <Method method="Sum" />
+              </Methods>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="SA2_NAME_2011" size="50" source="CrossTab:Group:Sum:" type="V_String" />
+                <Field name="HHSIZE_1" source="CrossTab:Header:hh:HHSIZE 1:Sum:" type="Int64" />
+                <Field name="HHSIZE_2" source="CrossTab:Header:hh:HHSIZE 2:Sum:" type="Int64" />
+                <Field name="HHSIZE_3" source="CrossTab:Header:hh:HHSIZE 3:Sum:" type="Int64" />
+                <Field name="HHSIZE_4" source="CrossTab:Header:hh:HHSIZE 4:Sum:" type="Int64" />
+                <Field name="HHSIZE_5" source="CrossTab:Header:hh:HHSIZE 5:Sum:" type="Int64" />
+                <Field name="HHSIZE_6" source="CrossTab:Header:hh:HHSIZE 6:Sum:" type="Int64" />
+                <Field name="HHSIZE_7" source="CrossTab:Header:hh:HHSIZE 7:Sum:" type="Int64" />
+                <Field name="HHSIZE_8" source="CrossTab:Header:hh:HHSIZE 8:Sum:" type="Int64" />
+                <Field name="HHSIZE_10" source="CrossTab:Header:hh:HHSIZE 10:Sum:" type="Int64" />
+              </RecordInfo>
+              <SortInfo>
+                <Field field="SA2_NAME_2011" order="Asc" />
+              </SortInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+        </Node>
+        <Node ToolID="91">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="247" y="638.0001" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <SelectFields>
+                <SelectField field="CountDistinctNonNull_HHID" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="92">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+            <Position x="343" y="638" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <GroupFields>
+                <Field field="SA2_NAME_2011" />
+              </GroupFields>
+              <HeaderField field="hh" />
+              <DataField field="Sum_HHWGT11" />
+              <Methods>
+                <Method method="Sum" />
+              </Methods>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="SA2_NAME_2011" size="50" source="CrossTab:Group:Sum:" type="V_String" />
+                <Field name="HHSIZE_1" source="CrossTab:Header:hh:HHSIZE 1:Sum:" type="Double" />
+                <Field name="HHSIZE_2" source="CrossTab:Header:hh:HHSIZE 2:Sum:" type="Double" />
+                <Field name="HHSIZE_3" source="CrossTab:Header:hh:HHSIZE 3:Sum:" type="Double" />
+                <Field name="HHSIZE_4" source="CrossTab:Header:hh:HHSIZE 4:Sum:" type="Double" />
+                <Field name="HHSIZE_5" source="CrossTab:Header:hh:HHSIZE 5:Sum:" type="Double" />
+                <Field name="HHSIZE_6" source="CrossTab:Header:hh:HHSIZE 6:Sum:" type="Double" />
+                <Field name="HHSIZE_7" source="CrossTab:Header:hh:HHSIZE 7:Sum:" type="Double" />
+                <Field name="HHSIZE_8" source="CrossTab:Header:hh:HHSIZE 8:Sum:" type="Double" />
+                <Field name="HHSIZE_10" source="CrossTab:Header:hh:HHSIZE 10:Sum:" type="Double" />
+              </RecordInfo>
+              <SortInfo>
+                <Field field="SA2_NAME_2011" order="Asc" />
+              </SortInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+        </Node>
+        <Node ToolID="93">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="151" y="614.0001" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="'HHSIZE ' + tostring([HHSIZE],0)" field="hh" size="1073741823" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText />
+              <DefaultAnnotationText><![CDATA[hh = 'HHSIZE ' + tostring([HHSIZE],0)
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="94">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="415" y="638" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <SelectFields>
+                <SelectField field="HHSIZE_1" selected="True" rename="Weighted_HHSIZE_1" />
+                <SelectField field="HHSIZE_2" selected="True" rename="Weighted_HHSIZE_2" />
+                <SelectField field="HHSIZE_3" selected="True" rename="Weighted_HHSIZE_3" />
+                <SelectField field="HHSIZE_4" selected="True" rename="Weighted_HHSIZE_4" />
+                <SelectField field="HHSIZE_5" selected="True" rename="Weighted_HHSIZE_5" />
+                <SelectField field="HHSIZE_6" selected="True" rename="Weighted_HHSIZE_6" />
+                <SelectField field="HHSIZE_7" selected="True" rename="Weighted_HHSIZE_7" />
+                <SelectField field="HHSIZE_8" selected="True" rename="Weighted_HHSIZE_8" />
+                <SelectField field="HHSIZE_10" selected="True" rename="Weighted_HHSIZE_10" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="95">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="415" y="578" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <SelectFields>
+                <SelectField field="HHSIZE_1" selected="True" rename="Sampled_HHSIZE_1" />
+                <SelectField field="HHSIZE_2" selected="True" rename="Sampled_HHSIZE_2" />
+                <SelectField field="HHSIZE_3" selected="True" rename="Sampled_HHSIZE_3" />
+                <SelectField field="HHSIZE_4" selected="True" rename="Sampled_HHSIZE_4" />
+                <SelectField field="HHSIZE_5" selected="True" rename="Sampled_HHSIZE_5" />
+                <SelectField field="HHSIZE_6" selected="True" rename="Sampled_HHSIZE_6" />
+                <SelectField field="HHSIZE_7" selected="True" rename="Sampled_HHSIZE_7" />
+                <SelectField field="HHSIZE_8" selected="True" rename="Sampled_HHSIZE_8" />
+                <SelectField field="HHSIZE_10" selected="True" rename="Sampled_HHSIZE_10" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="96">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+            <Position x="581" y="626" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldType>Numeric</FieldType>
+              <Fields orderChanged="False">
+                <Field name="Sampled_HHSIZE_1" />
+                <Field name="Sampled_HHSIZE_2" />
+                <Field name="Sampled_HHSIZE_3" />
+                <Field name="Sampled_HHSIZE_4" />
+                <Field name="Sampled_HHSIZE_5" />
+                <Field name="Sampled_HHSIZE_6" />
+                <Field name="Sampled_HHSIZE_7" />
+                <Field name="Sampled_HHSIZE_8" />
+                <Field name="Sampled_HHSIZE_10" />
+                <Field name="Weighted_HHSIZE_1" />
+                <Field name="Weighted_HHSIZE_2" />
+                <Field name="Weighted_HHSIZE_3" />
+                <Field name="Weighted_HHSIZE_4" />
+                <Field name="Weighted_HHSIZE_5" />
+                <Field name="Weighted_HHSIZE_6" />
+                <Field name="Weighted_HHSIZE_7" />
+                <Field name="Weighted_HHSIZE_8" />
+                <Field name="Weighted_HHSIZE_10" />
+                <Field name="*Unknown" />
+              </Fields>
+              <CopyOutput value="False" />
+              <Expression>Round([_CurrentField_], 1)</Expression>
+              <ChangeFieldType value="True" />
+              <OutputFieldType type="Int64" size="8" scale="1" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText />
+              <DefaultAnnotationText>Round([_CurrentField_], 1)</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+        </Node>
+        <Node ToolID="97">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="499" y="626" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="SA2_NAME_2011" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="SA2_NAME_2011" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_SA2_NAME_2011" selected="True" rename="Right_SA2_NAME_2011" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="117">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="570" y="306" width="218" height="204" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Joining The Three HTS inputs</Caption>
+          <Style TextColor="#314c4a" FillColor="#ffffd5" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="14">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="596" y="350" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="HHID" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="HHID" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <SelectFields>
+                    <SelectField field="Left_PERSID" selected="True" />
+                    <SelectField field="Left_PERSIDB" selected="True" />
+                    <SelectField field="Left_HHID" selected="True" />
+                    <SelectField field="Left_PERSNO" selected="True" />
+                    <SelectField field="Left_AGE" selected="True" />
+                    <SelectField field="Left_AGEGROUP" selected="True" />
+                    <SelectField field="Left_SEX" selected="True" />
+                    <SelectField field="Left_RELATIONSHIP" selected="True" />
+                    <SelectField field="Left_CARLICENCE" selected="True" />
+                    <SelectField field="Left_MBIKELICENCE" selected="True" />
+                    <SelectField field="Left_OTHERLICENCE" selected="True" />
+                    <SelectField field="Left_NOLICENCE" selected="True" />
+                    <SelectField field="Left_FULLTIMEWORK" selected="True" />
+                    <SelectField field="Left_PARTTIMEWORK" selected="True" />
+                    <SelectField field="Left_CASUALWORK" selected="True" />
+                    <SelectField field="Left_ANYWORK" selected="True" />
+                    <SelectField field="Left_STUDYING" selected="True" />
+                    <SelectField field="Left_ACTIVITIES" selected="True" />
+                    <SelectField field="Left_PERSWGT11" selected="True" />
+                    <SelectField field="Right_HHID" selected="False" rename="Right_HHID" />
+                    <SelectField field="Right_HHSIZE" selected="True" />
+                    <SelectField field="Right_HHVISITORS" selected="True" />
+                    <SelectField field="Right_HHSTRUCTURE" selected="True" />
+                    <SelectField field="Right_DWELLTYPE" selected="True" />
+                    <SelectField field="Right_OWNDWELL" selected="True" />
+                    <SelectField field="Right_YEARSLIVED" selected="True" />
+                    <SelectField field="Right_MONTHSLIVED" selected="True" />
+                    <SelectField field="Right_CARS" selected="True" />
+                    <SelectField field="Right_HOME_SA1_2011" selected="True" />
+                    <SelectField field="Right_HHWGT11" selected="True" />
+                    <SelectField field="*Unknown" selected="False" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="17">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="704" y="362" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="HOME_SA1_2011" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="SA1_7DIGITCODE_2011" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <SelectFields>
+                    <SelectField field="Left_PERSID" selected="True" />
+                    <SelectField field="Left_HHID" selected="True" />
+                    <SelectField field="Left_PERSNO" selected="True" />
+                    <SelectField field="Left_AGE" selected="True" />
+                    <SelectField field="Left_AGEGROUP" selected="True" />
+                    <SelectField field="Left_SEX" selected="True" />
+                    <SelectField field="Left_RELATIONSHIP" selected="True" />
+                    <SelectField field="Left_FULLTIMEWORK" selected="True" />
+                    <SelectField field="Left_PARTTIMEWORK" selected="True" />
+                    <SelectField field="Left_CASUALWORK" selected="True" />
+                    <SelectField field="Left_ANYWORK" selected="True" />
+                    <SelectField field="Left_STUDYING" selected="True" />
+                    <SelectField field="Left_PERSWGT11" selected="True" />
+                    <SelectField field="Left_HHSIZE" selected="True" />
+                    <SelectField field="Left_HOME_SA1_2011" selected="True" />
+                    <SelectField field="Left_HHWGT11" selected="True" />
+                    <SelectField field="Right_SA2_NAME_2011" selected="True" rename="HOME_SA2" />
+                    <SelectField field="*Unknown" selected="False" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="19">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="595" y="426" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <SelectFields>
+                <SelectField field="SA1_MAINCODE_2011" selected="True" />
+                <SelectField field="SA1_7DIGITCODE_2011" selected="True" type="Int32" size="4" />
+                <SelectField field="SA2_MAINCODE_2011" selected="True" />
+                <SelectField field="SA2_5DIGITCODE_2011" selected="True" />
+                <SelectField field="SA2_NAME_2011" selected="True" />
+                <SelectField field="SA3_CODE_2011" selected="True" />
+                <SelectField field="SA3_NAME_2011" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="38">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="703" y="426" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="HOME_SA1_2011" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="SA1_7DIGITCODE_2011" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <SelectFields>
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="128">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="282" y="1642" width="112.7585" height="19" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 128</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="114">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="307" y="1686" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File FileFormat="25" MaxRecords="">R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Alteryx Output\Summary_HTSvsDEMOG.xlsx|||HTS_Person</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <OutputOption>Overwrite</OutputOption>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Summary_HTSvsDEMOG.xlsx
+Table=HTS_Person</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="28">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="774" y="1686" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File FileFormat="42" MaxRecords="">R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Alteryx Output\Temp_WeightCheck\Demographics_summary.tde</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <OutputOption>Overwrite</OutputOption>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Demographics_summary.tde</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="27">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="654" y="1686" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File FileFormat="19" MaxRecords="">R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Alteryx Output\Temp_WeightCheck\Demographics_summary.yxdb</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <NoSpatialIndex>False</NoSpatialIndex>
+                <SaveSource>True</SaveSource>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Demographics_summary.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="112">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="426" y="1686" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File FileFormat="25" MaxRecords="">R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Alteryx Output\Summary_HTSvsDEMOG.xlsx|||Demog</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <OutputOption>Overwrite</OutputOption>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Summary_HTSvsDEMOG.xlsx
+Table=Demog</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="113">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="534" y="1686" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File FileFormat="25" MaxRecords="">R:\Regions\DarlingDowns\Toowoomba\TL-STM  2017\DATA\HTS\Toowoomba HTS\Alteryx Output\Summary_HTSvsDEMOG.xlsx|||HTS_HHDs</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <OutputOption>Overwrite</OutputOption>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Summary_HTSvsDEMOG.xlsx
+Table=HTS_HHDs</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection Wireless="True">
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="14" Connection="Left" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="14" Connection="Right" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="38" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="38" Connection="Right" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="35" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="78" Connection="Join" />
+      <Destination ToolID="116" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="85" Connection="Output" />
+      <Destination ToolID="78" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="61" Connection="Output" />
+      <Destination ToolID="78" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="76" Connection="Output" />
+      <Destination ToolID="85" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="75" Connection="Output" />
+      <Destination ToolID="76" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="70" Connection="Output" />
+      <Destination ToolID="76" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="67" Connection="Output" />
+      <Destination ToolID="76" Connection="Input" />
+    </Connection>
+    <Connection name="#5">
+      <Origin ToolID="108" Connection="Output" />
+      <Destination ToolID="76" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="74" Connection="Output" />
+      <Destination ToolID="71" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="73" Connection="Output" />
+      <Destination ToolID="74" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="71" Connection="Output" />
+      <Destination ToolID="72" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="69" Connection="Output" />
+      <Destination ToolID="70" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="68" Connection="Output" />
+      <Destination ToolID="69" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="66" Connection="Output" />
+      <Destination ToolID="67" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="65" Connection="Output" />
+      <Destination ToolID="66" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="64" Connection="Output" />
+      <Destination ToolID="75" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="108" Connection="Output" />
+      <Destination ToolID="109" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="106" Connection="Output" />
+      <Destination ToolID="108" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="107" Connection="Output" />
+      <Destination ToolID="106" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="110" Connection="Output" />
+      <Destination ToolID="107" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="116" Connection="Output" />
+      <Destination ToolID="114" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="60" Connection="Output" />
+      <Destination ToolID="61" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="47" Connection="Output" />
+      <Destination ToolID="61" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="44" Connection="Output" />
+      <Destination ToolID="61" Connection="Input" />
+    </Connection>
+    <Connection name="#5">
+      <Origin ToolID="104" Connection="Output" />
+      <Destination ToolID="61" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="46" Connection="Output" />
+      <Destination ToolID="47" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="45" Connection="Output" />
+      <Destination ToolID="46" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="43" Connection="Output" />
+      <Destination ToolID="44" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="42" Connection="Output" />
+      <Destination ToolID="43" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="60" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="102" Connection="Output" />
+      <Destination ToolID="104" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="103" Connection="Output" />
+      <Destination ToolID="102" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="101" Connection="Output" />
+      <Destination ToolID="103" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="100" Connection="Targets" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="112" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="35" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="100" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="86" Connection="Output" />
+      <Destination ToolID="93" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="89" Connection="Output" />
+      <Destination ToolID="90" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="90" Connection="Output" />
+      <Destination ToolID="95" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="91" Connection="Output" />
+      <Destination ToolID="92" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="92" Connection="Output" />
+      <Destination ToolID="94" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="93" Connection="Output" />
+      <Destination ToolID="89" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="93" Connection="Output" />
+      <Destination ToolID="91" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="94" Connection="Output" />
+      <Destination ToolID="97" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="95" Connection="Output" />
+      <Destination ToolID="97" Connection="Left" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="96" Connection="Output" />
+      <Destination ToolID="113" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="97" Connection="Join" />
+      <Destination ToolID="96" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Join" />
+      <Destination ToolID="17" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="17" Connection="Right" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="17" Connection="Join" />
+      <Destination ToolID="73" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="17" Connection="Join" />
+      <Destination ToolID="68" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="17" Connection="Join" />
+      <Destination ToolID="65" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="17" Connection="Join" />
+      <Destination ToolID="64" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="17" Connection="Join" />
+      <Destination ToolID="45" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="17" Connection="Join" />
+      <Destination ToolID="42" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="17" Connection="Join" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="17" Connection="Join" />
+      <Destination ToolID="101" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="17" Connection="Join" />
+      <Destination ToolID="110" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="38" Connection="Join" />
+      <Destination ToolID="86" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>HTS_weights</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

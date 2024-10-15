@@ -1,0 +1,1865 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="11.3">
+  <Nodes>
+    <Node ToolID="59">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+        <Position x="342" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields>
+            <Field field="Purpose" selected="True" />
+            <Field field="Equation" selected="True" />
+            <Field field="Rsqr" selected="True" />
+            <Field field="vars" selected="True" />
+            <Field field="BC_Accommodation_and_Food_Services" selected="True" />
+            <Field field="BC_Administrative_and_Support_Services" selected="True" />
+            <Field field="BC_Health_Care_and_Social_Assistance" selected="True" />
+            <Field field="BC_Retail_Trade" selected="True" />
+            <Field field="BC_Total_Jobs" selected="True" />
+            <Field field="Primary_pop" selected="True" />
+            <Field field="RES_5_17" selected="True" />
+            <Field field="RES_18_64" selected="True" />
+            <Field field="RES_65PLUS" selected="True" />
+            <Field field="RES_75PLUS" selected="True" />
+            <Field field="RES_ATT_PRIMARY_EDU" selected="True" />
+            <Field field="RES_ATT_SECONDARY_EDU" selected="True" />
+            <Field field="RES_BC_WORKERS_5_17" selected="True" />
+            <Field field="RES_BC_WORKERS_18_64" selected="True" />
+            <Field field="RES_BC_WORKERS_65PLUS" selected="True" />
+            <Field field="RES_EMPLOYED_5_17" selected="True" />
+            <Field field="RES_EMPLOYED_18_64" selected="True" />
+            <Field field="RES_WC_WORKERS_5_17" selected="True" />
+            <Field field="RES_WC_WORKERS_18_64" selected="True" />
+            <Field field="RES_WC_WORKERS_65PLUS" selected="True" />
+            <Field field="Secondary_pop" selected="True" />
+            <Field field="Total_BC_Workers" selected="True" />
+            <Field field="Total_Dependant" selected="True" />
+            <Field field="Total_employed" selected="True" />
+            <Field field="Total_Jobs" selected="True" />
+            <Field field="Total_population" selected="True" />
+            <Field field="Total_Primary_Secondary_Enrolement" selected="True" />
+            <Field field="Total_Primary_Secondary_Pop" selected="True" />
+            <Field field="Total_WC_Workers" selected="True" />
+            <Field field="Total_Worker" selected="True" />
+            <Field field="WC_Accommodation_and_Food_Services" selected="True" />
+            <Field field="WC_Administrative_and_Support_Services" selected="True" />
+            <Field field="WC_Education_and_Training" selected="True" />
+            <Field field="WC_Financial_and_Insurance_Services" selected="True" />
+            <Field field="WC_Health_Care_and_Social_Assistance" selected="True" />
+            <Field field="WC_Retail_Trade" selected="True" />
+            <Field field="WC_Total_Jobs" selected="True" />
+            <Field field="*Unknown" selected="True" />
+          </Fields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Purpose" size="10" source="CrossTab:Group:Concat:" type="String" />
+            <Field name="Equation" size="235" source="CrossTab:Group:Concat:" type="V_String" />
+            <Field name="Rsqr" source="CrossTab:Group:Concat:" type="Double" />
+            <Field name="vars" size="157" source="CrossTab:Group:Concat:" type="V_String" />
+            <Field name="BC_Accommodation_and_Food_Services" size="16" source="CrossTab:Header:RowNames:BC_Accommodation_and_Food_Services:Concat:" type="V_String" />
+            <Field name="BC_Administrative_and_Support_Services" size="16" source="CrossTab:Header:RowNames:BC_Administrative_and_Support_Services:Concat:" type="V_String" />
+            <Field name="BC_Health_Care_and_Social_Assistance" size="17" source="CrossTab:Header:RowNames:BC_Health_Care_and_Social_Assistance:Concat:" type="V_String" />
+            <Field name="BC_Retail_Trade" size="16" source="CrossTab:Header:RowNames:BC_Retail_Trade:Concat:" type="V_String" />
+            <Field name="BC_Total_Jobs" size="19" source="CrossTab:Header:RowNames:BC_Total_Jobs:Concat:" type="V_String" />
+            <Field name="Primary_pop" size="17" source="CrossTab:Header:RowNames:Primary_pop:Concat:" type="V_String" />
+            <Field name="RES_5_17" size="18" source="CrossTab:Header:RowNames:RES_5_17:Concat:" type="V_String" />
+            <Field name="RES_18_64" size="18" source="CrossTab:Header:RowNames:RES_18_64:Concat:" type="V_String" />
+            <Field name="RES_65PLUS" size="19" source="CrossTab:Header:RowNames:RES_65PLUS:Concat:" type="V_String" />
+            <Field name="RES_75PLUS" size="18" source="CrossTab:Header:RowNames:RES_75PLUS:Concat:" type="V_String" />
+            <Field name="RES_ATT_PRIMARY_EDU" size="16" source="CrossTab:Header:RowNames:RES_ATT_PRIMARY_EDU:Concat:" type="V_String" />
+            <Field name="RES_ATT_SECONDARY_EDU" size="16" source="CrossTab:Header:RowNames:RES_ATT_SECONDARY_EDU:Concat:" type="V_String" />
+            <Field name="RES_BC_WORKERS_5_17" size="16" source="CrossTab:Header:RowNames:RES_BC_WORKERS_5_17:Concat:" type="V_String" />
+            <Field name="RES_BC_WORKERS_18_64" size="17" source="CrossTab:Header:RowNames:RES_BC_WORKERS_18_64:Concat:" type="V_String" />
+            <Field name="RES_BC_WORKERS_65PLUS" size="17" source="CrossTab:Header:RowNames:RES_BC_WORKERS_65PLUS:Concat:" type="V_String" />
+            <Field name="RES_EMPLOYED_5_17" size="16" source="CrossTab:Header:RowNames:RES_EMPLOYED_5_17:Concat:" type="V_String" />
+            <Field name="RES_EMPLOYED_18_64" size="17" source="CrossTab:Header:RowNames:RES_EMPLOYED_18_64:Concat:" type="V_String" />
+            <Field name="RES_WC_WORKERS_5_17" size="16" source="CrossTab:Header:RowNames:RES_WC_WORKERS_5_17:Concat:" type="V_String" />
+            <Field name="RES_WC_WORKERS_18_64" size="17" source="CrossTab:Header:RowNames:RES_WC_WORKERS_18_64:Concat:" type="V_String" />
+            <Field name="RES_WC_WORKERS_65PLUS" size="17" source="CrossTab:Header:RowNames:RES_WC_WORKERS_65PLUS:Concat:" type="V_String" />
+            <Field name="Secondary_pop" size="16" source="CrossTab:Header:RowNames:Secondary_pop:Concat:" type="V_String" />
+            <Field name="Total_BC_Workers" size="17" source="CrossTab:Header:RowNames:Total_BC_Workers:Concat:" type="V_String" />
+            <Field name="Total_Dependant" size="17" source="CrossTab:Header:RowNames:Total_Dependant:Concat:" type="V_String" />
+            <Field name="Total_employed" size="17" source="CrossTab:Header:RowNames:Total_employed:Concat:" type="V_String" />
+            <Field name="Total_Jobs" size="17" source="CrossTab:Header:RowNames:Total_Jobs:Concat:" type="V_String" />
+            <Field name="Total_population" size="19" source="CrossTab:Header:RowNames:Total_population:Concat:" type="V_String" />
+            <Field name="Total_Primary_Secondary_Enrolement" size="16" source="CrossTab:Header:RowNames:Total_Primary_Secondary_Enrolement:Concat:" type="V_String" />
+            <Field name="Total_Primary_Secondary_Pop" size="17" source="CrossTab:Header:RowNames:Total_Primary_Secondary_Pop:Concat:" type="V_String" />
+            <Field name="Total_WC_Workers" size="17" source="CrossTab:Header:RowNames:Total_WC_Workers:Concat:" type="V_String" />
+            <Field name="Total_Worker" size="19" source="CrossTab:Header:RowNames:Total_Worker:Concat:" type="V_String" />
+            <Field name="WC_Accommodation_and_Food_Services" size="15" source="CrossTab:Header:RowNames:WC_Accommodation_and_Food_Services:Concat:" type="V_String" />
+            <Field name="WC_Administrative_and_Support_Services" size="16" source="CrossTab:Header:RowNames:WC_Administrative_and_Support_Services:Concat:" type="V_String" />
+            <Field name="WC_Education_and_Training" size="19" source="CrossTab:Header:RowNames:WC_Education_and_Training:Concat:" type="V_String" />
+            <Field name="WC_Financial_and_Insurance_Services" size="16" source="CrossTab:Header:RowNames:WC_Financial_and_Insurance_Services:Concat:" type="V_String" />
+            <Field name="WC_Health_Care_and_Social_Assistance" size="18" source="CrossTab:Header:RowNames:WC_Health_Care_and_Social_Assistance:Concat:" type="V_String" />
+            <Field name="WC_Retail_Trade" size="18" source="CrossTab:Header:RowNames:WC_Retail_Trade:Concat:" type="V_String" />
+            <Field name="WC_Total_Jobs" size="17" source="CrossTab:Header:RowNames:WC_Total_Jobs:Concat:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+    </Node>
+    <Node ToolID="62">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="30" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">E:\01-Regional Strategic Models\Toowoomba\DATA\HTS\Toowoomba HTS\Alteryx Output\Output_TripGen_result_MyAugust.csv</File>
+          <FormatSpecificOptions>
+            <CodePage>28591</CodePage>
+            <Delimeter>,</Delimeter>
+            <IgnoreErrors>False</IgnoreErrors>
+            <FieldLen>254</FieldLen>
+            <AllowShareWrite>False</AllowShareWrite>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Output of TripGen 
+trip generation regression result</AnnotationText>
+          <DefaultAnnotationText>Output_TripGen_result_MyAugust.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RowNames" size="254" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\HTS\Toowoomba HTS\Alteryx Output\Output_TripGen_result_MyAugust.csv" type="V_String" />
+            <Field name="Estimate" size="254" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\HTS\Toowoomba HTS\Alteryx Output\Output_TripGen_result_MyAugust.csv" type="V_String" />
+            <Field name="Std. Error" size="254" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\HTS\Toowoomba HTS\Alteryx Output\Output_TripGen_result_MyAugust.csv" type="V_String" />
+            <Field name="t value" size="254" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\HTS\Toowoomba HTS\Alteryx Output\Output_TripGen_result_MyAugust.csv" type="V_String" />
+            <Field name="Pr(&gt;|t|)" size="254" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\HTS\Toowoomba HTS\Alteryx Output\Output_TripGen_result_MyAugust.csv" type="V_String" />
+            <Field name="Purpose" size="254" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\HTS\Toowoomba HTS\Alteryx Output\Output_TripGen_result_MyAugust.csv" type="V_String" />
+            <Field name="Equation" size="254" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\HTS\Toowoomba HTS\Alteryx Output\Output_TripGen_result_MyAugust.csv" type="V_String" />
+            <Field name="Rsqr" size="254" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\HTS\Toowoomba HTS\Alteryx Output\Output_TripGen_result_MyAugust.csv" type="V_String" />
+            <Field name="vars" size="254" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\HTS\Toowoomba HTS\Alteryx Output\Output_TripGen_result_MyAugust.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="63">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+        <Position x="246" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupFields>
+            <Field field="Purpose" />
+            <Field field="Equation" />
+            <Field field="Rsqr" />
+            <Field field="vars" />
+          </GroupFields>
+          <HeaderField field="RowNames" />
+          <DataField field="Estimate" />
+          <Methods>
+            <Method method="Concat" />
+            <Separator>,</Separator>
+            <FieldSize value="2048" />
+          </Methods>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Purpose" size="254" source="CrossTab:Group:Concat:" type="V_String" />
+            <Field name="Equation" size="254" source="CrossTab:Group:Concat:" type="V_String" />
+            <Field name="Rsqr" size="254" source="CrossTab:Group:Concat:" type="V_String" />
+            <Field name="vars" size="254" source="CrossTab:Group:Concat:" type="V_String" />
+            <Field name="BC_Accommodation_and_Food_Services" size="2048" source="CrossTab:Header:RowNames:BC_Accommodation_and_Food_Services:Concat:" type="V_String" />
+            <Field name="BC_Administrative_and_Support_Services" size="2048" source="CrossTab:Header:RowNames:BC_Administrative_and_Support_Services:Concat:" type="V_String" />
+            <Field name="BC_Health_Care_and_Social_Assistance" size="2048" source="CrossTab:Header:RowNames:BC_Health_Care_and_Social_Assistance:Concat:" type="V_String" />
+            <Field name="BC_Retail_Trade" size="2048" source="CrossTab:Header:RowNames:BC_Retail_Trade:Concat:" type="V_String" />
+            <Field name="BC_Total_Jobs" size="2048" source="CrossTab:Header:RowNames:BC_Total_Jobs:Concat:" type="V_String" />
+            <Field name="Primary_pop" size="2048" source="CrossTab:Header:RowNames:Primary_pop:Concat:" type="V_String" />
+            <Field name="RES_5_17" size="2048" source="CrossTab:Header:RowNames:RES_5_17:Concat:" type="V_String" />
+            <Field name="RES_18_64" size="2048" source="CrossTab:Header:RowNames:RES_18_64:Concat:" type="V_String" />
+            <Field name="RES_65PLUS" size="2048" source="CrossTab:Header:RowNames:RES_65PLUS:Concat:" type="V_String" />
+            <Field name="RES_75PLUS" size="2048" source="CrossTab:Header:RowNames:RES_75PLUS:Concat:" type="V_String" />
+            <Field name="RES_ATT_PRIMARY_EDU" size="2048" source="CrossTab:Header:RowNames:RES_ATT_PRIMARY_EDU:Concat:" type="V_String" />
+            <Field name="RES_ATT_SECONDARY_EDU" size="2048" source="CrossTab:Header:RowNames:RES_ATT_SECONDARY_EDU:Concat:" type="V_String" />
+            <Field name="RES_BC_WORKERS_5_17" size="2048" source="CrossTab:Header:RowNames:RES_BC_WORKERS_5_17:Concat:" type="V_String" />
+            <Field name="RES_BC_WORKERS_18_64" size="2048" source="CrossTab:Header:RowNames:RES_BC_WORKERS_18_64:Concat:" type="V_String" />
+            <Field name="RES_BC_WORKERS_65PLUS" size="2048" source="CrossTab:Header:RowNames:RES_BC_WORKERS_65PLUS:Concat:" type="V_String" />
+            <Field name="RES_EMPLOYED_5_17" size="2048" source="CrossTab:Header:RowNames:RES_EMPLOYED_5_17:Concat:" type="V_String" />
+            <Field name="RES_EMPLOYED_18_64" size="2048" source="CrossTab:Header:RowNames:RES_EMPLOYED_18_64:Concat:" type="V_String" />
+            <Field name="RES_WC_WORKERS_5_17" size="2048" source="CrossTab:Header:RowNames:RES_WC_WORKERS_5_17:Concat:" type="V_String" />
+            <Field name="RES_WC_WORKERS_18_64" size="2048" source="CrossTab:Header:RowNames:RES_WC_WORKERS_18_64:Concat:" type="V_String" />
+            <Field name="RES_WC_WORKERS_65PLUS" size="2048" source="CrossTab:Header:RowNames:RES_WC_WORKERS_65PLUS:Concat:" type="V_String" />
+            <Field name="Secondary_pop" size="2048" source="CrossTab:Header:RowNames:Secondary_pop:Concat:" type="V_String" />
+            <Field name="Total_BC_Workers" size="2048" source="CrossTab:Header:RowNames:Total_BC_Workers:Concat:" type="V_String" />
+            <Field name="Total_Dependant" size="2048" source="CrossTab:Header:RowNames:Total_Dependant:Concat:" type="V_String" />
+            <Field name="Total_employed" size="2048" source="CrossTab:Header:RowNames:Total_employed:Concat:" type="V_String" />
+            <Field name="Total_Jobs" size="2048" source="CrossTab:Header:RowNames:Total_Jobs:Concat:" type="V_String" />
+            <Field name="Total_population" size="2048" source="CrossTab:Header:RowNames:Total_population:Concat:" type="V_String" />
+            <Field name="Total_Primary_Secondary_Enrolement" size="2048" source="CrossTab:Header:RowNames:Total_Primary_Secondary_Enrolement:Concat:" type="V_String" />
+            <Field name="Total_Primary_Secondary_Pop" size="2048" source="CrossTab:Header:RowNames:Total_Primary_Secondary_Pop:Concat:" type="V_String" />
+            <Field name="Total_WC_Workers" size="2048" source="CrossTab:Header:RowNames:Total_WC_Workers:Concat:" type="V_String" />
+            <Field name="Total_Worker" size="2048" source="CrossTab:Header:RowNames:Total_Worker:Concat:" type="V_String" />
+            <Field name="WC_Accommodation_and_Food_Services" size="2048" source="CrossTab:Header:RowNames:WC_Accommodation_and_Food_Services:Concat:" type="V_String" />
+            <Field name="WC_Administrative_and_Support_Services" size="2048" source="CrossTab:Header:RowNames:WC_Administrative_and_Support_Services:Concat:" type="V_String" />
+            <Field name="WC_Education_and_Training" size="2048" source="CrossTab:Header:RowNames:WC_Education_and_Training:Concat:" type="V_String" />
+            <Field name="WC_Financial_and_Insurance_Services" size="2048" source="CrossTab:Header:RowNames:WC_Financial_and_Insurance_Services:Concat:" type="V_String" />
+            <Field name="WC_Health_Care_and_Social_Assistance" size="2048" source="CrossTab:Header:RowNames:WC_Health_Care_and_Social_Assistance:Concat:" type="V_String" />
+            <Field name="WC_Retail_Trade" size="2048" source="CrossTab:Header:RowNames:WC_Retail_Trade:Concat:" type="V_String" />
+            <Field name="WC_Total_Jobs" size="2048" source="CrossTab:Header:RowNames:WC_Total_Jobs:Concat:" type="V_String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Purpose" order="Asc" />
+            <Field field="Equation" order="Asc" />
+            <Field field="Rsqr" order="Asc" />
+            <Field field="vars" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+    </Node>
+    <Node ToolID="70">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="222" y="462" width="432" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text><![CDATA[The first field in the demographic input will be used as identifier 
+It can be any type (string, Int, float, etc) It happens in ApplyTripGen.yxmc
+ ]]></Text>
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="74">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="30" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Input 1- 
+Demog at Zones level with SA2 Concordance</AnnotationText>
+          <DefaultAnnotationText>Twb_Demog_701_zones.xlsx
+Table=`2016$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="TRSTM_Zone" size="255" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="V_String" />
+            <Field name="SA2_NAME_2011" size="255" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="V_String" />
+            <Field name="SA3_NAME_2011" size="255" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="V_String" />
+            <Field name="SA4_NAME_2011" size="255" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="V_String" />
+            <Field name="ga_Group_Sector" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="gb_Group_Sector" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Toowoomba Zone" size="255" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="V_String" />
+            <Field name="YEAR" size="255" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="V_String" />
+            <Field name="RES_0_17" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_5_17" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_18_64" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_18_54" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_55_74" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_75PLUS" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_65PLUS" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Primary_pop" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Secondary_pop" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Post secondary_pop" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Total population" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_EMPLOYED_0_17" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_EMPLOYED_5_17" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_EMPLOYED_18_64" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_EMPLOYED_18_54" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_EMPLOYED_55_74" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_EMPLOYED_75PLUS" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_EMPLOYED_65PLUS" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Total employed" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_BC_WORKERS_0_17" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_BC_WORKERS_5_17" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_BC_WORKERS_18_64" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_BC_WORKERS_18_54" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_BC_WORKERS_55_74" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_BC_WORKERS_75PLUS" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_BC_WORKERS_65PLUS" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_WC_WORKERS_0_17" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_WC_WORKERS_5_17" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_WC_WORKERS_18_64" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_WC_WORKERS_18_54" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_WC_WORKERS_55_74" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_WC_WORKERS_75PLUS" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_WC_WORKERS_65PLUS" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_LABOUR_FORCE_0_17" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_LABOUR_FORCE_5_17" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_LABOUR_FORCE_18_64" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_LABOUR_FORCE_18_54" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_LABOUR_FORCE_55_74" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_LABOUR_FORCE_75PLUS" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_LABOUR_FORCE_65PLUS" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_DEPENDANTS_0_17" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_DEPENDANTS_5_17" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_DEPENDANTS_18_64" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_DEPENDANTS_18_54" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_DEPENDANTS_55_74" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_DEPENDANTS_75PLUS" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_DEPENDANTS_65PLUS" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_ATT_PRIMARY_EDU" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_ATT_SECONDARY_EDU" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="RES_ATT_POST_SECONDARY_EDU" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="VISITORS_DOMESTIC" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="VISITORS_INTERNATIONAL" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="OCCUPIED_PRIVATE_DWELLINGS" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Total Jobs" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="WC_Agriculture, Forestry and Fishing" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="WC_Mining" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="WC_Manufacturing" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="WC_Electricity, Gas, Water and Waste Services" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="WC_Construction" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="WC_Wholesale Trade" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="WC_Retail Trade" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="WC_Accommodation and Food Services" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="WC_Transport, Postal and Warehousing" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="WC_Information Media and Telecommunications" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="WC_Financial and Insurance Services" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="WC_Rental, Hiring and Real Estate Services" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="WC_Professional, Scientific and Technical Services" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="WC_Administrative and Support Services" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="WC_Public Administration and Safety" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="WC_Education and Training" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="WC_Health Care and Social Assistance" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="WC_Arts and Recreation Services" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="WC_Other Services" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="WC_Total Jobs" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="BC_Agriculture, Forestry and Fishing" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="BC_Mining" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="BC_Manufacturing" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="BC_Electricity, Gas, Water and Waste Services" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="BC_Construction" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="BC_Wholesale Trade" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="BC_Retail Trade" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="BC_Accommodation and Food Services" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="BC_Transport, Postal and Warehousing" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="BC_Information Media and Telecommunications" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="BC_Financial and Insurance Services" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="BC_Rental, Hiring and Real Estate Services" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="BC_Professional, Scientific and Technical Services" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="BC_Administrative and Support Services" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="BC_Public Administration and Safety" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="BC_Education and Training" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="BC_Health Care and Social Assistance" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="BC_Arts and Recreation Services" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="BC_Other Services" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="BC_Total Jobs" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="ENR_PRIMARY" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="ENR_SECONDARY" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="ENR_TERTIARY" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Occupied_NPD" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Total _Occupied_dwellings" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Total Accommodation and Food Services" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Total Administrative and Support Services" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Total Agriculture, Forestry and Fishing" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Total Arts and Recreation Services" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Total BC Worker" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Total Construction" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Total Dependant" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Total Education and Training" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Total Electricity, Gas, Water and Waste Services" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Total Financial and Insurance Services" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Total Health Care and Social Assistance" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Total Information Media and Telecommunications" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Total Labour Force " source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Total Manufacturing" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Total Mining" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Total Other Services" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Total Primary Secondary Att" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Total Primary Secondary Enrolement" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Total Primary Secondary Pop" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Total Professional, Scientific and Technical Services" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Total Public Administration and Safety" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Total Rental, Hiring and Real Estate Services" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Total Retail Trade" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Total Transport, Postal and Warehousing" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Total WC Worker" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Total Wholesale Trade" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+            <Field name="Total Worker" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="77">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="438" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="0">
+            <Field field="Purpose" order="Ascending" />
+            <Field field="Rsqr" order="Descending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText />
+          <DefaultAnnotationText>Purpose - Ascending
+Rsqr - Descending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="82">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="630" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Field>Equation</Field>
+            <Operator>Contains</Operator>
+            <Operands>
+              <Operand>-</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Exclude relationships with negative coefficients</AnnotationText>
+          <DefaultAnnotationText>Contains([Equation],"-")</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="83">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="546" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>ID</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="84">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="846" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[ID] IN (1,2,3,5,12,16,39,43,48,52,56,68,83,86)</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Select the Regression Equations</AnnotationText>
+          <DefaultAnnotationText>[ID] IN (1,2,3,5,12,16,39,43,48,52,56,68,83,86)</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="86">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="90" y="546" width="1200" height="288" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text><![CDATA[
+
+
+
+
+
+1-----------Attr_HBE_P	0.52366862170399 x Total_Primary_Secondary_Enrolement
+2-----------Attr_HBW_B	1.7182820056791 x BC_Total_Jobs
+3-----------Attr_HBW_W	1.20133872834584 x WC_Total_Jobs
+4-----------Attr_hbo	1.1728896945487 x Total_Jobs + 0.340756331465846 x Total_Primary_Secondary_Enrolement
+11-----------Attr_hbs	16.4701796740565 x BC_Retail_Trade + 3.42759775979023 x WC_Retail_Trade
+21-----------Attr_onh	0.398645743770132 x WC_Total_Jobs
+37-----------Attr_wbo	3.09975166768282 x BC_Accommodation_and_Food_Services + 0.821411473218201 x WC_Financial_and_Insurance_Services + 1.26611548821547 x WC_Health_Care_and_Social_Assistance
+44-----------Pro_HBE_P	1.20405208530215 x Total_Primary_Secondary_Pop
+46-----------Pro_HBW_B	1.15760896773975 x RES_BC_WORKERS_18_64 + 1.99513363299914 x RES_BC_WORKERS_65PLUS
+52-----------Pro_HBW_W	1.3084950298877 x Total_WC_Workers
+58-----------Pro_hbo	    1.35404686528455 x Total_Worker
+74-----------Pro_hbs	    0.318877885954044 x Total_population
+83-----------Pro_onh	    0.306765709340845 x Total_Jobs
+86-----------Pro_wbo	    0.347007374368148 x Total_Jobs]]></Text>
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="87">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="138" y="570" width="348" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Output_TripGen_result24012017.csv</Text>
+          <Font name="Segoe UI" size="12" style="1" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="93">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DynamicSelect.DynamicSelect">
+        <Position x="846" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Formula</Mode>
+          <Expression>Contains([Name], "Worker") and Contains([Name], "Total")</Expression>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDynamicSelect" />
+    </Node>
+    <Node ToolID="94">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="138" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Total BC Worker" selected="True" rename="Total BC Workers" />
+            <SelectField field="Total WC Worker" selected="True" rename="Total WC Workers" />
+            <SelectField field="Total Worker" selected="True" rename="Total Workers" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="95">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+        <Position x="138" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UniqueFields>
+            <Field field="RowNames" />
+            <Field field="Purpose" />
+            <Field field="Equation" />
+            <Field field="Rsqr" />
+          </UniqueFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Unique: RowNames, Purpose, Equation, Rsqr</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+    </Node>
+    <Node ToolID="99">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="738" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="0">
+            <Field field="Purpose" order="Ascending" />
+            <Field field="Rsqr" order="Descending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText />
+          <DefaultAnnotationText>Purpose - Ascending
+Rsqr - Descending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="103">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="834" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="14" />
+          <Fields>
+            <Field name="order" />
+            <Field name="Purpose" />
+          </Fields>
+          <Data>
+            <r>
+              <c>1</c>
+              <c>Pro_HBWw</c>
+            </r>
+            <r>
+              <c>2</c>
+              <c>Pro_HBWb</c>
+            </r>
+            <r>
+              <c>3</c>
+              <c>Pro_HBEps</c>
+            </r>
+            <r>
+              <c>4</c>
+              <c>Pro_hbs</c>
+            </r>
+            <r>
+              <c>5</c>
+              <c>Pro_hbo</c>
+            </r>
+            <r>
+              <c>6</c>
+              <c>Pro_wbo</c>
+            </r>
+            <r>
+              <c>7</c>
+              <c>Pro_onh</c>
+            </r>
+            <r>
+              <c>8</c>
+              <c>Attr_HBWw</c>
+            </r>
+            <r>
+              <c>9</c>
+              <c>Attr_HBWb</c>
+            </r>
+            <r>
+              <c>10</c>
+              <c>Attr_HBEps</c>
+            </r>
+            <r>
+              <c>11</c>
+              <c>Attr_hbs</c>
+            </r>
+            <r>
+              <c>12</c>
+              <c>Attr_hbo</c>
+            </r>
+            <r>
+              <c>13</c>
+              <c>Attr_wbo</c>
+            </r>
+            <r>
+              <c>14</c>
+              <c>Attr_onh</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="104">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="990" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Purpose" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Purpose" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Purpose" selected="False" rename="Right_Purpose" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="106">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="1098" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="0">
+            <Field field="order" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>order - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="107">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1230" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="order" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="108">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+        <Position x="1338" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldType>Text</FieldType>
+          <Fields orderChanged="False">
+            <Field name="BC_Accommodation_and_Food_Services" />
+            <Field name="BC_Administrative_and_Support_Services" />
+            <Field name="BC_Health_Care_and_Social_Assistance" />
+            <Field name="BC_Retail_Trade" />
+            <Field name="BC_Total_Jobs" />
+            <Field name="Primary_pop" />
+            <Field name="RES_5_17" />
+            <Field name="RES_18_64" />
+            <Field name="RES_65PLUS" />
+            <Field name="RES_75PLUS" />
+            <Field name="RES_ATT_PRIMARY_EDU" />
+            <Field name="RES_ATT_SECONDARY_EDU" />
+            <Field name="RES_BC_WORKERS_5_17" />
+            <Field name="RES_BC_WORKERS_18_64" />
+            <Field name="RES_BC_WORKERS_65PLUS" />
+            <Field name="RES_EMPLOYED_5_17" />
+            <Field name="RES_EMPLOYED_18_64" />
+            <Field name="RES_WC_WORKERS_5_17" />
+            <Field name="RES_WC_WORKERS_18_64" />
+            <Field name="RES_WC_WORKERS_65PLUS" />
+            <Field name="Secondary_pop" />
+            <Field name="Total_BC_Workers" />
+            <Field name="Total_Dependant" />
+            <Field name="Total_employed" />
+            <Field name="Total_Jobs" />
+            <Field name="Total_population" />
+            <Field name="Total_Primary_Secondary_Enrolement" />
+            <Field name="Total_Primary_Secondary_Pop" />
+            <Field name="Total_WC_Workers" />
+            <Field name="Total_Worker" />
+            <Field name="WC_Accommodation_and_Food_Services" />
+            <Field name="WC_Administrative_and_Support_Services" />
+            <Field name="WC_Education_and_Training" />
+            <Field name="WC_Financial_and_Insurance_Services" />
+            <Field name="WC_Health_Care_and_Social_Assistance" />
+            <Field name="WC_Retail_Trade" />
+            <Field name="WC_Total_Jobs" />
+            <Field name="*Unknown" />
+            <Field name="Purpose" selected="False" />
+            <Field name="Equation" selected="False" />
+            <Field name="vars" selected="False" />
+          </Fields>
+          <CopyOutput value="False" />
+          <Expression>round(ToNumber([_CurrentField_],1),0.001)</Expression>
+          <ChangeFieldType value="True" />
+          <OutputFieldType type="Double" size="8" scale="1" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>round(ToNumber([_CurrentField_],1),0.001)</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+    </Node>
+    <Node ToolID="78">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1182" y="54.00002" width="303.7867" height="19" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Run regression analysis based on selected equation</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="10" />
+          <Disabled value="True" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="57">
+          <GuiSettings>
+            <Position x="1192" y="83.00014" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="BatchMacroGroupBy" />
+              <Value name="ControlParams"><![CDATA[Control Parameter (7)=ID
+]]></Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output12">
+              <RecordInfo>
+                <Field name="TRSTM_Zone" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RecordID" source="Summarize: GroupBy - RecordID" type="Int32" />
+                <Field name="Sum_Value" source="Summarize: Sum - Value" type="Double" />
+                <Field name="Purpose" size="10" source="CrossTab:Group:Concat:" type="String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings Macro="..\macro\ApplyTripGen3.yxmc" />
+        </Node>
+        <Node ToolID="61">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+            <Position x="1304" y="83.00002" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <GroupFields>
+                <Field field="TRSTM_Zone" />
+              </GroupFields>
+              <HeaderField field="Purpose" />
+              <DataField field="Sum_Value" />
+              <Methods>
+                <Method method="Sum" />
+              </Methods>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="TRSTM_Zone" source="CrossTab:Group:Sum:" type="Float" />
+                <Field name="Attr_HBEps" source="CrossTab:Header:Purpose:Attr_HBEps:Sum:" type="Double" />
+                <Field name="Attr_hbo" source="CrossTab:Header:Purpose:Attr_hbo:Sum:" type="Double" />
+                <Field name="Attr_hbs" source="CrossTab:Header:Purpose:Attr_hbs:Sum:" type="Double" />
+                <Field name="Attr_HBWb" source="CrossTab:Header:Purpose:Attr_HBWb:Sum:" type="Double" />
+                <Field name="Attr_HBWw" source="CrossTab:Header:Purpose:Attr_HBWw:Sum:" type="Double" />
+                <Field name="Attr_onh" source="CrossTab:Header:Purpose:Attr_onh:Sum:" type="Double" />
+                <Field name="Attr_wbo" source="CrossTab:Header:Purpose:Attr_wbo:Sum:" type="Double" />
+                <Field name="Pro_HBEps" source="CrossTab:Header:Purpose:Pro_HBEps:Sum:" type="Double" />
+                <Field name="Pro_hbo" source="CrossTab:Header:Purpose:Pro_hbo:Sum:" type="Double" />
+                <Field name="Pro_hbs" source="CrossTab:Header:Purpose:Pro_hbs:Sum:" type="Double" />
+                <Field name="Pro_HBWb" source="CrossTab:Header:Purpose:Pro_HBWb:Sum:" type="Double" />
+                <Field name="Pro_HBWw" source="CrossTab:Header:Purpose:Pro_HBWw:Sum:" type="Double" />
+                <Field name="Pro_onh" source="CrossTab:Header:Purpose:Pro_onh:Sum:" type="Double" />
+                <Field name="Pro_wbo" source="CrossTab:Header:Purpose:Pro_wbo:Sum:" type="Double" />
+              </RecordInfo>
+              <SortInfo>
+                <Field field="TRSTM_Zone" order="Asc" />
+              </SortInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+        </Node>
+        <Node ToolID="85">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="1470" y="83.00002" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File FileFormat="25" MaxRecords="">..\Alteryx Output\Trip_generation_applied_MyAugust.xlsx|||Sheet1</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <OutputOption>RemoveFile</OutputOption>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText><![CDATA[Trip_generation_applied.xlsx
+]]></AnnotationText>
+              <DefaultAnnotationText>Trip_generation_applied_MyAugust.xlsx
+Table=Sheet1</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="100">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="1398" y="114" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File FileFormat="25" MaxRecords="">E:\01-Regional Strategic Models\Toowoomba\DATA\HTS\Toowoomba HTS\Alteryx Output\TripGeneration_Factors_Appllied_August.xlsx|||Selected_TripGen_Factors</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <OutputOption>RemoveFile</OutputOption>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>TripGeneration_Factors_Appllied_August.xlsx
+Table=Selected_TripGen_Factors</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="69">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="224" y="61" width="595" height="164" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Rename all Column to remove space from column heads</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="10" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="64">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Transpose.Transpose">
+            <Position x="366" y="126" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ErrorWarn>Warn</ErrorWarn>
+              <KeyFields />
+              <DataFields>
+                <Field field="TRSTM_Zone" selected="True" />
+                <Field field="SA2_NAME_2011" selected="True" />
+                <Field field="SA3_NAME_2011" selected="True" />
+                <Field field="SA4_NAME_2011" selected="True" />
+                <Field field="ga_Group_Sector" selected="True" />
+                <Field field="gb_Group_Sector" selected="True" />
+                <Field field="Toowoomba Zone" selected="True" />
+                <Field field="YEAR" selected="True" />
+                <Field field="RES_0_17" selected="True" />
+                <Field field="RES_5_17" selected="True" />
+                <Field field="RES_18_64" selected="True" />
+                <Field field="RES_18_54" selected="True" />
+                <Field field="RES_55_74" selected="True" />
+                <Field field="RES_75PLUS" selected="True" />
+                <Field field="RES_65PLUS" selected="True" />
+                <Field field="Primary_pop" selected="True" />
+                <Field field="Secondary_pop" selected="True" />
+                <Field field="Post secondary_pop" selected="True" />
+                <Field field="Total population" selected="True" />
+                <Field field="RES_EMPLOYED_0_17" selected="True" />
+                <Field field="RES_EMPLOYED_5_17" selected="True" />
+                <Field field="RES_EMPLOYED_18_64" selected="True" />
+                <Field field="RES_EMPLOYED_18_54" selected="True" />
+                <Field field="RES_EMPLOYED_55_74" selected="True" />
+                <Field field="RES_EMPLOYED_75PLUS" selected="True" />
+                <Field field="RES_EMPLOYED_65PLUS" selected="True" />
+                <Field field="Total employed" selected="True" />
+                <Field field="RES_BC_WORKERS_0_17" selected="True" />
+                <Field field="RES_BC_WORKERS_5_17" selected="True" />
+                <Field field="RES_BC_WORKERS_18_64" selected="True" />
+                <Field field="RES_BC_WORKERS_18_54" selected="True" />
+                <Field field="RES_BC_WORKERS_55_74" selected="True" />
+                <Field field="RES_BC_WORKERS_75PLUS" selected="True" />
+                <Field field="RES_BC_WORKERS_65PLUS" selected="True" />
+                <Field field="RES_WC_WORKERS_0_17" selected="True" />
+                <Field field="RES_WC_WORKERS_5_17" selected="True" />
+                <Field field="RES_WC_WORKERS_18_64" selected="True" />
+                <Field field="RES_WC_WORKERS_18_54" selected="True" />
+                <Field field="RES_WC_WORKERS_55_74" selected="True" />
+                <Field field="RES_WC_WORKERS_75PLUS" selected="True" />
+                <Field field="RES_WC_WORKERS_65PLUS" selected="True" />
+                <Field field="RES_LABOUR_FORCE_0_17" selected="True" />
+                <Field field="RES_LABOUR_FORCE_5_17" selected="True" />
+                <Field field="RES_LABOUR_FORCE_18_64" selected="True" />
+                <Field field="RES_LABOUR_FORCE_18_54" selected="True" />
+                <Field field="RES_LABOUR_FORCE_55_74" selected="True" />
+                <Field field="RES_LABOUR_FORCE_75PLUS" selected="True" />
+                <Field field="RES_LABOUR_FORCE_65PLUS" selected="True" />
+                <Field field="RES_DEPENDANTS_0_17" selected="True" />
+                <Field field="RES_DEPENDANTS_5_17" selected="True" />
+                <Field field="RES_DEPENDANTS_18_64" selected="True" />
+                <Field field="RES_DEPENDANTS_18_54" selected="True" />
+                <Field field="RES_DEPENDANTS_55_74" selected="True" />
+                <Field field="RES_DEPENDANTS_75PLUS" selected="True" />
+                <Field field="RES_DEPENDANTS_65PLUS" selected="True" />
+                <Field field="RES_ATT_PRIMARY_EDU" selected="True" />
+                <Field field="RES_ATT_SECONDARY_EDU" selected="True" />
+                <Field field="RES_ATT_POST_SECONDARY_EDU" selected="True" />
+                <Field field="VISITORS_DOMESTIC" selected="True" />
+                <Field field="VISITORS_INTERNATIONAL" selected="True" />
+                <Field field="OCCUPIED_PRIVATE_DWELLINGS" selected="True" />
+                <Field field="Total Jobs" selected="True" />
+                <Field field="WC_Agriculture, Forestry and Fishing" selected="True" />
+                <Field field="WC_Mining" selected="True" />
+                <Field field="WC_Manufacturing" selected="True" />
+                <Field field="WC_Electricity, Gas, Water and Waste Services" selected="True" />
+                <Field field="WC_Construction" selected="True" />
+                <Field field="WC_Wholesale Trade" selected="True" />
+                <Field field="WC_Retail Trade" selected="True" />
+                <Field field="WC_Accommodation and Food Services" selected="True" />
+                <Field field="WC_Transport, Postal and Warehousing" selected="True" />
+                <Field field="WC_Information Media and Telecommunications" selected="True" />
+                <Field field="WC_Financial and Insurance Services" selected="True" />
+                <Field field="WC_Rental, Hiring and Real Estate Services" selected="True" />
+                <Field field="WC_Professional, Scientific and Technical Services" selected="True" />
+                <Field field="WC_Administrative and Support Services" selected="True" />
+                <Field field="WC_Public Administration and Safety" selected="True" />
+                <Field field="WC_Education and Training" selected="True" />
+                <Field field="WC_Health Care and Social Assistance" selected="True" />
+                <Field field="WC_Arts and Recreation Services" selected="True" />
+                <Field field="WC_Other Services" selected="True" />
+                <Field field="WC_Total Jobs" selected="True" />
+                <Field field="BC_Agriculture, Forestry and Fishing" selected="True" />
+                <Field field="BC_Mining" selected="True" />
+                <Field field="BC_Manufacturing" selected="True" />
+                <Field field="BC_Electricity, Gas, Water and Waste Services" selected="True" />
+                <Field field="BC_Construction" selected="True" />
+                <Field field="BC_Wholesale Trade" selected="True" />
+                <Field field="BC_Retail Trade" selected="True" />
+                <Field field="BC_Accommodation and Food Services" selected="True" />
+                <Field field="BC_Transport, Postal and Warehousing" selected="True" />
+                <Field field="BC_Information Media and Telecommunications" selected="True" />
+                <Field field="BC_Financial and Insurance Services" selected="True" />
+                <Field field="BC_Rental, Hiring and Real Estate Services" selected="True" />
+                <Field field="BC_Professional, Scientific and Technical Services" selected="True" />
+                <Field field="BC_Administrative and Support Services" selected="True" />
+                <Field field="BC_Public Administration and Safety" selected="True" />
+                <Field field="BC_Education and Training" selected="True" />
+                <Field field="BC_Health Care and Social Assistance" selected="True" />
+                <Field field="BC_Arts and Recreation Services" selected="True" />
+                <Field field="BC_Other Services" selected="True" />
+                <Field field="BC_Total Jobs" selected="True" />
+                <Field field="ENR_PRIMARY" selected="True" />
+                <Field field="ENR_SECONDARY" selected="True" />
+                <Field field="ENR_TERTIARY" selected="True" />
+                <Field field="Occupied_NPD" selected="True" />
+                <Field field="Total _Occupied_dwellings" selected="True" />
+                <Field field="Total Accommodation and Food Services" selected="True" />
+                <Field field="Total Administrative and Support Services" selected="True" />
+                <Field field="Total Agriculture, Forestry and Fishing" selected="True" />
+                <Field field="Total Arts and Recreation Services" selected="True" />
+                <Field field="Total BC Worker" selected="True" />
+                <Field field="Total Construction" selected="True" />
+                <Field field="Total Dependant" selected="True" />
+                <Field field="Total Education and Training" selected="True" />
+                <Field field="Total Electricity, Gas, Water and Waste Services" selected="True" />
+                <Field field="Total Financial and Insurance Services" selected="True" />
+                <Field field="Total Health Care and Social Assistance" selected="True" />
+                <Field field="Total Information Media and Telecommunications" selected="True" />
+                <Field field="Total Labour Force " selected="True" />
+                <Field field="Total Manufacturing" selected="True" />
+                <Field field="Total Mining" selected="True" />
+                <Field field="Total Other Services" selected="True" />
+                <Field field="Total Primary Secondary Att" selected="True" />
+                <Field field="Total Primary Secondary Enrolement" selected="True" />
+                <Field field="Total Primary Secondary Pop" selected="True" />
+                <Field field="Total Professional, Scientific and Technical Services" selected="True" />
+                <Field field="Total Public Administration and Safety" selected="True" />
+                <Field field="Total Rental, Hiring and Real Estate Services" selected="True" />
+                <Field field="Total Retail Trade" selected="True" />
+                <Field field="Total Transport, Postal and Warehousing" selected="True" />
+                <Field field="Total WC Worker" selected="True" />
+                <Field field="Total Wholesale Trade" selected="True" />
+                <Field field="Total Worker" selected="True" />
+                <Field field="*Unknown" selected="True" />
+              </DataFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTranspose" />
+        </Node>
+        <Node ToolID="65">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="462" y="126" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Name" action="GroupBy" rename="Name" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="66">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="558" y="126" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="Replace([Name], &quot; &quot;, &quot;_&quot;)" field="new_name" size="64" type="V_String" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Replace sapce with underscore</AnnotationText>
+              <DefaultAnnotationText><![CDATA[new_name = Replace([Name], " ", "_")
+]]></DefaultAnnotationText>
+              <Left value="True" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="67">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DynamicRename.DynamicRename">
+            <Position x="750" y="102" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <RenameMode>RightInputRows</RenameMode>
+              <Fields orderChanged="False">
+                <Field name="TRSTM_Zone" />
+                <Field name="SA2_NAME_2011" />
+                <Field name="SA3_NAME_2011" />
+                <Field name="SA4_NAME_2011" />
+                <Field name="ga_Group_Sector" />
+                <Field name="gb_Group_Sector" />
+                <Field name="Toowoomba Zone" />
+                <Field name="YEAR" />
+                <Field name="RES_0_17" />
+                <Field name="RES_5_17" />
+                <Field name="RES_18_64" />
+                <Field name="RES_18_54" />
+                <Field name="RES_55_74" />
+                <Field name="RES_75PLUS" />
+                <Field name="RES_65PLUS" />
+                <Field name="Primary_pop" />
+                <Field name="Secondary_pop" />
+                <Field name="Post secondary_pop" />
+                <Field name="Total population" />
+                <Field name="RES_EMPLOYED_0_17" />
+                <Field name="RES_EMPLOYED_5_17" />
+                <Field name="RES_EMPLOYED_18_64" />
+                <Field name="RES_EMPLOYED_18_54" />
+                <Field name="RES_EMPLOYED_55_74" />
+                <Field name="RES_EMPLOYED_75PLUS" />
+                <Field name="RES_EMPLOYED_65PLUS" />
+                <Field name="Total employed" />
+                <Field name="RES_BC_WORKERS_0_17" />
+                <Field name="RES_BC_WORKERS_5_17" />
+                <Field name="RES_BC_WORKERS_18_64" />
+                <Field name="RES_BC_WORKERS_18_54" />
+                <Field name="RES_BC_WORKERS_55_74" />
+                <Field name="RES_BC_WORKERS_75PLUS" />
+                <Field name="RES_BC_WORKERS_65PLUS" />
+                <Field name="RES_WC_WORKERS_0_17" />
+                <Field name="RES_WC_WORKERS_5_17" />
+                <Field name="RES_WC_WORKERS_18_64" />
+                <Field name="RES_WC_WORKERS_18_54" />
+                <Field name="RES_WC_WORKERS_55_74" />
+                <Field name="RES_WC_WORKERS_75PLUS" />
+                <Field name="RES_WC_WORKERS_65PLUS" />
+                <Field name="RES_LABOUR_FORCE_0_17" />
+                <Field name="RES_LABOUR_FORCE_5_17" />
+                <Field name="RES_LABOUR_FORCE_18_64" />
+                <Field name="RES_LABOUR_FORCE_18_54" />
+                <Field name="RES_LABOUR_FORCE_55_74" />
+                <Field name="RES_LABOUR_FORCE_75PLUS" />
+                <Field name="RES_LABOUR_FORCE_65PLUS" />
+                <Field name="RES_DEPENDANTS_0_17" />
+                <Field name="RES_DEPENDANTS_5_17" />
+                <Field name="RES_DEPENDANTS_18_64" />
+                <Field name="RES_DEPENDANTS_18_54" />
+                <Field name="RES_DEPENDANTS_55_74" />
+                <Field name="RES_DEPENDANTS_75PLUS" />
+                <Field name="RES_DEPENDANTS_65PLUS" />
+                <Field name="RES_ATT_PRIMARY_EDU" />
+                <Field name="RES_ATT_SECONDARY_EDU" />
+                <Field name="RES_ATT_POST_SECONDARY_EDU" />
+                <Field name="VISITORS_DOMESTIC" />
+                <Field name="VISITORS_INTERNATIONAL" />
+                <Field name="OCCUPIED_PRIVATE_DWELLINGS" />
+                <Field name="Total Jobs" />
+                <Field name="WC_Agriculture, Forestry and Fishing" />
+                <Field name="WC_Mining" />
+                <Field name="WC_Manufacturing" />
+                <Field name="WC_Electricity, Gas, Water and Waste Services" />
+                <Field name="WC_Construction" />
+                <Field name="WC_Wholesale Trade" />
+                <Field name="WC_Retail Trade" />
+                <Field name="WC_Accommodation and Food Services" />
+                <Field name="WC_Transport, Postal and Warehousing" />
+                <Field name="WC_Information Media and Telecommunications" />
+                <Field name="WC_Financial and Insurance Services" />
+                <Field name="WC_Rental, Hiring and Real Estate Services" />
+                <Field name="WC_Professional, Scientific and Technical Services" />
+                <Field name="WC_Administrative and Support Services" />
+                <Field name="WC_Public Administration and Safety" />
+                <Field name="WC_Education and Training" />
+                <Field name="WC_Health Care and Social Assistance" />
+                <Field name="WC_Arts and Recreation Services" />
+                <Field name="WC_Other Services" />
+                <Field name="WC_Total Jobs" />
+                <Field name="BC_Agriculture, Forestry and Fishing" />
+                <Field name="BC_Mining" />
+                <Field name="BC_Manufacturing" />
+                <Field name="BC_Electricity, Gas, Water and Waste Services" />
+                <Field name="BC_Construction" />
+                <Field name="BC_Wholesale Trade" />
+                <Field name="BC_Retail Trade" />
+                <Field name="BC_Accommodation and Food Services" />
+                <Field name="BC_Transport, Postal and Warehousing" />
+                <Field name="BC_Information Media and Telecommunications" />
+                <Field name="BC_Financial and Insurance Services" />
+                <Field name="BC_Rental, Hiring and Real Estate Services" />
+                <Field name="BC_Professional, Scientific and Technical Services" />
+                <Field name="BC_Administrative and Support Services" />
+                <Field name="BC_Public Administration and Safety" />
+                <Field name="BC_Education and Training" />
+                <Field name="BC_Health Care and Social Assistance" />
+                <Field name="BC_Arts and Recreation Services" />
+                <Field name="BC_Other Services" />
+                <Field name="BC_Total Jobs" />
+                <Field name="ENR_PRIMARY" />
+                <Field name="ENR_SECONDARY" />
+                <Field name="ENR_TERTIARY" />
+                <Field name="Occupied_NPD" />
+                <Field name="Total _Occupied_dwellings" />
+                <Field name="Total Accommodation and Food Services" />
+                <Field name="Total Administrative and Support Services" />
+                <Field name="Total Agriculture, Forestry and Fishing" />
+                <Field name="Total Arts and Recreation Services" />
+                <Field name="Total BC Worker" />
+                <Field name="Total Construction" />
+                <Field name="Total Dependant" />
+                <Field name="Total Education and Training" />
+                <Field name="Total Electricity, Gas, Water and Waste Services" />
+                <Field name="Total Financial and Insurance Services" />
+                <Field name="Total Health Care and Social Assistance" />
+                <Field name="Total Information Media and Telecommunications" />
+                <Field name="Total Labour Force " />
+                <Field name="Total Manufacturing" />
+                <Field name="Total Mining" />
+                <Field name="Total Other Services" />
+                <Field name="Total Primary Secondary Att" />
+                <Field name="Total Primary Secondary Enrolement" />
+                <Field name="Total Primary Secondary Pop" />
+                <Field name="Total Professional, Scientific and Technical Services" />
+                <Field name="Total Public Administration and Safety" />
+                <Field name="Total Rental, Hiring and Real Estate Services" />
+                <Field name="Total Retail Trade" />
+                <Field name="Total Transport, Postal and Warehousing" />
+                <Field name="Total WC Worker" />
+                <Field name="Total Wholesale Trade" />
+                <Field name="Total Worker" />
+                <Field name="*Unknown" />
+              </Fields>
+              <Expression />
+              <NamesFromRows>
+                <OnError>Warn</OnError>
+                <InputMode>Mapped</InputMode>
+                <OldName>Name</OldName>
+                <NewName>new_name</NewName>
+              </NamesFromRows>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="TRSTM_Zone" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="SA2_NAME_2011" size="255" source="File: E:\01-Regional Strategic Models\Toowoomba\DATA\Demography\4.Output\Twb_Demog_701_zones.xlsx|||`2016$`" type="V_String" />
+                <Field name="SA3_NAME_2011" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="SA4_NAME_2011" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="ga_Group_Sector" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="gb_Group_Sector" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Toowoomba_Zone" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="YEAR" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_0_17" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_5_17" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_18_64" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_18_54" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_55_74" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_75PLUS" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_65PLUS" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Primary_pop" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Secondary_pop" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Post_secondary_pop" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Total_population" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_EMPLOYED_0_17" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_EMPLOYED_5_17" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_EMPLOYED_18_64" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_EMPLOYED_18_54" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_EMPLOYED_55_74" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_EMPLOYED_75PLUS" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_EMPLOYED_65PLUS" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Total_employed" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_BC_WORKERS_0_17" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_BC_WORKERS_5_17" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_BC_WORKERS_18_64" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_BC_WORKERS_18_54" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_BC_WORKERS_55_74" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_BC_WORKERS_75PLUS" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_BC_WORKERS_65PLUS" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_WC_WORKERS_0_17" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_WC_WORKERS_5_17" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_WC_WORKERS_18_64" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_WC_WORKERS_18_54" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_WC_WORKERS_55_74" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_WC_WORKERS_75PLUS" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_WC_WORKERS_65PLUS" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_LABOUR_FORCE_0_17" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_LABOUR_FORCE_5_17" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_LABOUR_FORCE_18_64" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_LABOUR_FORCE_18_54" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_LABOUR_FORCE_55_74" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_LABOUR_FORCE_75PLUS" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_LABOUR_FORCE_65PLUS" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_DEPENDANTS_0_17" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_DEPENDANTS_5_17" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_DEPENDANTS_18_64" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_DEPENDANTS_18_54" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_DEPENDANTS_55_74" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_DEPENDANTS_75PLUS" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_DEPENDANTS_65PLUS" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_ATT_PRIMARY_EDU" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_ATT_SECONDARY_EDU" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="RES_ATT_POST_SECONDARY_EDU" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="VISITORS_DOMESTIC" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="VISITORS_INTERNATIONAL" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="OCCUPIED_PRIVATE_DWELLINGS" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Total_Jobs" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="WC_Agriculture_Forestry_and_Fishing" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="WC_Mining" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="WC_Manufacturing" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="WC_Electricity_Gas_Water_and_Waste_Services" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="WC_Construction" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="WC_Wholesale_Trade" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="WC_Retail_Trade" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="WC_Accommodation_and_Food_Services" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="WC_Transport_Postal_and_Warehousing" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="WC_Information_Media_and_Telecommunications" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="WC_Financial_and_Insurance_Services" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="WC_Rental_Hiring_and_Real_Estate_Services" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="WC_Professional_Scientific_and_Technical_Services" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="WC_Administrative_and_Support_Services" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="WC_Public_Administration_and_Safety" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="WC_Education_and_Training" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="WC_Health_Care_and_Social_Assistance" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="WC_Arts_and_Recreation_Services" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="WC_Other_Services" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="WC_Total_Jobs" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="BC_Agriculture_Forestry_and_Fishing" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="BC_Mining" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="BC_Manufacturing" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="BC_Electricity_Gas_Water_and_Waste_Services" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="BC_Construction" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="BC_Wholesale_Trade" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="BC_Retail_Trade" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="BC_Accommodation_and_Food_Services" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="BC_Transport_Postal_and_Warehousing" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="BC_Information_Media_and_Telecommunications" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="BC_Financial_and_Insurance_Services" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="BC_Rental_Hiring_and_Real_Estate_Services" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="BC_Professional_Scientific_and_Technical_Services" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="BC_Administrative_and_Support_Services" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="BC_Public_Administration_and_Safety" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="BC_Education_and_Training" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="BC_Health_Care_and_Social_Assistance" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="BC_Arts_and_Recreation_Services" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="BC_Other_Services" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="BC_Total_Jobs" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="ENR_PRIMARY" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="ENR_SECONDARY" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="ENR_TERTIARY" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Occupied_NPD" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Total__Occupied_dwellings" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Total_Accommodation_and_Food_Services" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Total_Administrative_and_Support_Services" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Total_Agriculture_Forestry_and_Fishing" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Total_Arts_and_Recreation_Services" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Total_BC_Workers" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Total_Construction" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Total_Dependant" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Total_Education_and_Training" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Total_Electricity_Gas_Water_and_Waste_Services" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Total_Financial_and_Insurance_Services" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Total_Health_Care_and_Social_Assistance" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Total_Information_Media_and_Telecommunications" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Total_Labour_Force_" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Total_Manufacturing" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Total_Mining" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Total_Other_Services" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Total_Primary_Secondary_Att" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Total_Primary_Secondary_Enrolement" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Total_Primary_Secondary_Pop" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Total_Professional_Scientific_and_Technical_Services" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Total_Public_Administration_and_Safety" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Total_Rental_Hiring_and_Real_Estate_Services" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Total_Retail_Trade" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Total_Transport_Postal_and_Warehousing" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Total_WC_Workers" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Total_Wholesale_Trade" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+                <Field name="Total_Workers" source="Formula: ToNumber([_CurrentField_],1)" type="Float" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDynamicRename" />
+        </Node>
+        <Node ToolID="68">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
+            <Position x="654" y="126" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Field>new_name</Field>
+              <RegExExpression value="\," />
+              <CaseInsensitve value="True" />
+              <Method>Replace</Method>
+              <Replace expression="">
+                <CopyUnmatched value="True" />
+              </Replace>
+              <ParseSimple>
+                <SplitToRows value="False" />
+                <RootName>new_name</RootName>
+                <NumFields value="3" />
+                <ErrorHandling>Warn</ErrorHandling>
+              </ParseSimple>
+              <ParseComplex>
+                <Field field="No Marked Groups Found" type="No Marked Groups Found" size="No Marked Groups Found" />
+              </ParseComplex>
+              <Match>
+                <Field>new_name_Matched</Field>
+                <ErrorUnmatched value="False" />
+              </Match>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText />
+              <DefaultAnnotationText><![CDATA[Replace:
+\,
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRegEx" />
+        </Node>
+        <Node ToolID="76">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+            <Position x="270" y="90" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldType>All</FieldType>
+              <Fields orderChanged="False">
+                <Field name="TRSTM_Zone" />
+                <Field name="SA3_NAME_2011" />
+                <Field name="SA4_NAME_2011" />
+                <Field name="ga_Group_Sector" />
+                <Field name="gb_Group_Sector" />
+                <Field name="Toowoomba Zone" />
+                <Field name="YEAR" />
+                <Field name="RES_0_17" />
+                <Field name="RES_5_17" />
+                <Field name="RES_18_64" />
+                <Field name="RES_18_54" />
+                <Field name="RES_55_74" />
+                <Field name="RES_75PLUS" />
+                <Field name="RES_65PLUS" />
+                <Field name="Primary_pop" />
+                <Field name="Secondary_pop" />
+                <Field name="Post secondary_pop" />
+                <Field name="Total population" />
+                <Field name="RES_EMPLOYED_0_17" />
+                <Field name="RES_EMPLOYED_5_17" />
+                <Field name="RES_EMPLOYED_18_64" />
+                <Field name="RES_EMPLOYED_18_54" />
+                <Field name="RES_EMPLOYED_55_74" />
+                <Field name="RES_EMPLOYED_75PLUS" />
+                <Field name="RES_EMPLOYED_65PLUS" />
+                <Field name="Total employed" />
+                <Field name="RES_BC_WORKERS_0_17" />
+                <Field name="RES_BC_WORKERS_5_17" />
+                <Field name="RES_BC_WORKERS_18_64" />
+                <Field name="RES_BC_WORKERS_18_54" />
+                <Field name="RES_BC_WORKERS_55_74" />
+                <Field name="RES_BC_WORKERS_75PLUS" />
+                <Field name="RES_BC_WORKERS_65PLUS" />
+                <Field name="RES_WC_WORKERS_0_17" />
+                <Field name="RES_WC_WORKERS_5_17" />
+                <Field name="RES_WC_WORKERS_18_64" />
+                <Field name="RES_WC_WORKERS_18_54" />
+                <Field name="RES_WC_WORKERS_55_74" />
+                <Field name="RES_WC_WORKERS_75PLUS" />
+                <Field name="RES_WC_WORKERS_65PLUS" />
+                <Field name="RES_LABOUR_FORCE_0_17" />
+                <Field name="RES_LABOUR_FORCE_5_17" />
+                <Field name="RES_LABOUR_FORCE_18_64" />
+                <Field name="RES_LABOUR_FORCE_18_54" />
+                <Field name="RES_LABOUR_FORCE_55_74" />
+                <Field name="RES_LABOUR_FORCE_75PLUS" />
+                <Field name="RES_LABOUR_FORCE_65PLUS" />
+                <Field name="RES_DEPENDANTS_0_17" />
+                <Field name="RES_DEPENDANTS_5_17" />
+                <Field name="RES_DEPENDANTS_18_64" />
+                <Field name="RES_DEPENDANTS_18_54" />
+                <Field name="RES_DEPENDANTS_55_74" />
+                <Field name="RES_DEPENDANTS_75PLUS" />
+                <Field name="RES_DEPENDANTS_65PLUS" />
+                <Field name="RES_ATT_PRIMARY_EDU" />
+                <Field name="RES_ATT_SECONDARY_EDU" />
+                <Field name="RES_ATT_POST_SECONDARY_EDU" />
+                <Field name="VISITORS_DOMESTIC" />
+                <Field name="VISITORS_INTERNATIONAL" />
+                <Field name="OCCUPIED_PRIVATE_DWELLINGS" />
+                <Field name="Total Jobs" />
+                <Field name="WC_Agriculture, Forestry and Fishing" />
+                <Field name="WC_Mining" />
+                <Field name="WC_Manufacturing" />
+                <Field name="WC_Electricity, Gas, Water and Waste Services" />
+                <Field name="WC_Construction" />
+                <Field name="WC_Wholesale Trade" />
+                <Field name="WC_Retail Trade" />
+                <Field name="WC_Accommodation and Food Services" />
+                <Field name="WC_Transport, Postal and Warehousing" />
+                <Field name="WC_Information Media and Telecommunications" />
+                <Field name="WC_Financial and Insurance Services" />
+                <Field name="WC_Rental, Hiring and Real Estate Services" />
+                <Field name="WC_Professional, Scientific and Technical Services" />
+                <Field name="WC_Administrative and Support Services" />
+                <Field name="WC_Public Administration and Safety" />
+                <Field name="WC_Education and Training" />
+                <Field name="WC_Health Care and Social Assistance" />
+                <Field name="WC_Arts and Recreation Services" />
+                <Field name="WC_Other Services" />
+                <Field name="WC_Total Jobs" />
+                <Field name="BC_Agriculture, Forestry and Fishing" />
+                <Field name="BC_Mining" />
+                <Field name="BC_Manufacturing" />
+                <Field name="BC_Electricity, Gas, Water and Waste Services" />
+                <Field name="BC_Construction" />
+                <Field name="BC_Wholesale Trade" />
+                <Field name="BC_Retail Trade" />
+                <Field name="BC_Accommodation and Food Services" />
+                <Field name="BC_Transport, Postal and Warehousing" />
+                <Field name="BC_Information Media and Telecommunications" />
+                <Field name="BC_Financial and Insurance Services" />
+                <Field name="BC_Rental, Hiring and Real Estate Services" />
+                <Field name="BC_Professional, Scientific and Technical Services" />
+                <Field name="BC_Administrative and Support Services" />
+                <Field name="BC_Public Administration and Safety" />
+                <Field name="BC_Education and Training" />
+                <Field name="BC_Health Care and Social Assistance" />
+                <Field name="BC_Arts and Recreation Services" />
+                <Field name="BC_Other Services" />
+                <Field name="BC_Total Jobs" />
+                <Field name="ENR_PRIMARY" />
+                <Field name="ENR_SECONDARY" />
+                <Field name="ENR_TERTIARY" />
+                <Field name="Occupied_NPD" />
+                <Field name="Total _Occupied_dwellings" />
+                <Field name="Total Accommodation and Food Services" />
+                <Field name="Total Administrative and Support Services" />
+                <Field name="Total Agriculture, Forestry and Fishing" />
+                <Field name="Total Arts and Recreation Services" />
+                <Field name="Total BC Worker" />
+                <Field name="Total Construction" />
+                <Field name="Total Dependant" />
+                <Field name="Total Education and Training" />
+                <Field name="Total Electricity, Gas, Water and Waste Services" />
+                <Field name="Total Financial and Insurance Services" />
+                <Field name="Total Health Care and Social Assistance" />
+                <Field name="Total Information Media and Telecommunications" />
+                <Field name="Total Labour Force " />
+                <Field name="Total Manufacturing" />
+                <Field name="Total Mining" />
+                <Field name="Total Other Services" />
+                <Field name="Total Primary Secondary Att" />
+                <Field name="Total Primary Secondary Enrolement" />
+                <Field name="Total Primary Secondary Pop" />
+                <Field name="Total Professional, Scientific and Technical Services" />
+                <Field name="Total Public Administration and Safety" />
+                <Field name="Total Rental, Hiring and Real Estate Services" />
+                <Field name="Total Retail Trade" />
+                <Field name="Total Transport, Postal and Warehousing" />
+                <Field name="Total WC Worker" />
+                <Field name="Total Wholesale Trade" />
+                <Field name="Total Worker" />
+                <Field name="*Unknown" />
+                <Field name="SA2_NAME_2011" selected="False" />
+                <Field name="Productin SA2" selected="False" />
+              </Fields>
+              <CopyOutput value="False" />
+              <Expression>ToNumber([_CurrentField_],1)</Expression>
+              <ChangeFieldType value="True" />
+              <OutputFieldType type="Float" size="4" scale="1" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>ToNumber</AnnotationText>
+              <DefaultAnnotationText>ToNumber([_CurrentField_],1)</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+        </Node>
+        <Node ToolID="80">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="234" y="191" width="396" height="24" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>* total employed and total workers are the same - Different variable names</Text>
+              <Font name="Segoe UI" size="5.25" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="White" />
+              <Shape shape="3" />
+              <Justification Justification="4" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="59" Connection="Output" />
+      <Destination ToolID="77" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="62" Connection="Output" />
+      <Destination ToolID="95" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="63" Connection="Output" />
+      <Destination ToolID="59" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="74" Connection="Output" />
+      <Destination ToolID="94" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="77" Connection="Output" />
+      <Destination ToolID="57" Connection="Input30" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="108" Connection="Output" />
+      <Destination ToolID="57" Connection="Control" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="67" Connection="Output" />
+      <Destination ToolID="57" Connection="Input3" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="77" Connection="Output" />
+      <Destination ToolID="83" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="82" Connection="False" />
+      <Destination ToolID="99" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="83" Connection="Output" />
+      <Destination ToolID="82" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="84" Connection="True" />
+      <Destination ToolID="104" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="103" Connection="Output" />
+      <Destination ToolID="104" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="94" Connection="Output" />
+      <Destination ToolID="76" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="95" Connection="Unique" />
+      <Destination ToolID="63" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="99" Connection="Output" />
+      <Destination ToolID="84" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="104" Connection="Join" />
+      <Destination ToolID="106" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="106" Connection="Output" />
+      <Destination ToolID="100" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="106" Connection="Output" />
+      <Destination ToolID="107" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="107" Connection="Output" />
+      <Destination ToolID="108" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="57" Connection="Output12" />
+      <Destination ToolID="61" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="61" Connection="Output" />
+      <Destination ToolID="85" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="64" Connection="Output" />
+      <Destination ToolID="65" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="65" Connection="Output" />
+      <Destination ToolID="66" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="66" Connection="Output" />
+      <Destination ToolID="68" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="67" Connection="Output" />
+      <Destination ToolID="93" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="68" Connection="Output" />
+      <Destination ToolID="67" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="76" Connection="Output" />
+      <Destination ToolID="67" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="76" Connection="Output" />
+      <Destination ToolID="64" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>04_ApplyTripGen</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

@@ -1,0 +1,789 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="11.0">
+  <Nodes>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="174" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Alteryx Output\Output_Trips_TP_Zones.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Output_Trips_TP_Zones.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="LTRIPID" size="19" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="V_WString" />
+            <Field name="LHHID" size="13" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="V_WString" />
+            <Field name="LPERSID" size="16" source="Formula: IIf( Right([LPERSID], 1)== &quot;T&quot;,Left([LPERSID], Length([LPERSID])-1), [LPERSID]) " type="V_WString" />
+            <Field name="LFIRSTOP" size="22" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="V_WString" />
+            <Field name="LASTOP" size="22" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="V_WString" />
+            <Field name="LTRIPNO" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="Int32" />
+            <Field name="LTRIPNUM" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="Int32" />
+            <Field name="LSTARTIME" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="Int32" />
+            <Field name="LENDTIME" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="Int32" />
+            <Field name="LORIGSA1" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="Int32" />
+            <Field name="LORIGBSTM" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="Int32" />
+            <Field name="LDESTSA1" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="Int32" />
+            <Field name="LDESTBSTM" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="Int32" />
+            <Field name="OMP" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="Int32" />
+            <Field name="DMP" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="Int32" />
+            <Field name="MC_Purpose" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="Int32" />
+            <Field name="MC_Purpose_new" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="Int32" />
+            <Field name="VOCC" size="16" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="V_WString" />
+            <Field name="vehCHG" size="200" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="V_WString" />
+            <Field name="MODES" size="50" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="V_WString" />
+            <Field name="MCM" size="2" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="V_WString" />
+            <Field name="DIRECTION" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="Int32" />
+            <Field name="ATTRSA1" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="Int32" />
+            <Field name="ATTRBSTM" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="Int32" />
+            <Field name="PRODSA1" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="Int32" />
+            <Field name="PRODBSTM" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="Int32" />
+            <Field name="MIDTIME" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="Int32" />
+            <Field name="TPSTART" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="Int32" />
+            <Field name="TPMID" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="Int32" />
+            <Field name="TPEND" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="Int32" />
+            <Field name="STOPWGT11" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="Double" />
+            <Field name="PERWGT" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="Double" />
+            <Field name="TRIPWGT" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="Double" />
+            <Field name="ORIGPLACE1" source="Formula: IIF(IsNull([ORIGPLACE1]), 999, [ORIGPLACE1])&#xA;&#xA;" type="Int32" />
+            <Field name="ORIGPLACE2" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="Int32" />
+            <Field name="ORIGPURP1" source="Formula: IIF(IsNull([ORIGPURP1]), 999, [ORIGPURP1])" type="Int32" />
+            <Field name="ORIGPURP2" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="Int32" />
+            <Field name="DESTPLACE1" source="Formula: IIF(IsNull([DESTPLACE1]), 999, [DESTPLACE1])" type="Int32" />
+            <Field name="DESTPLACE2" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="Int32" />
+            <Field name="DESTPURP1" source="Formula: IIF(IsNull([DESTPURP1]), 999, [DESTPURP1])" type="Int32" />
+            <Field name="DESTPURP2" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`6_MOD_LINK_TRIPS`" type="Int32" />
+            <Field name="ORIGLONG" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`4_TWB_STOPS_2012`" type="Double" />
+            <Field name="ORIGLAT" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`4_TWB_STOPS_2012`" type="Double" />
+            <Field name="DESTLONG" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`4_TWB_STOPS_2012`" type="Double" />
+            <Field name="DESTLAT" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`4_TWB_STOPS_2012`" type="Double" />
+            <Field name="PERSID" size="15" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="String" />
+            <Field name="PERSIDB" size="15" source="Formula: IIf( Right([PERSIDB], 1)== &quot;T&quot;,Left([PERSIDB], Length([PERSIDB])-1), [PERSID]) " type="String" />
+            <Field name="HHID" size="12" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="String" />
+            <Field name="PERSNO" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Byte" />
+            <Field name="AGE" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Byte" />
+            <Field name="AGEGROUP" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Byte" />
+            <Field name="SEX" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Byte" />
+            <Field name="RELATIONSHIP" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Byte" />
+            <Field name="COUNTRYCODE" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Byte" />
+            <Field name="CARLICENCE" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Byte" />
+            <Field name="MBIKELICENCE" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Byte" />
+            <Field name="OTHERLICENCE" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Byte" />
+            <Field name="NOLICENCE" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Byte" />
+            <Field name="FULLTIMEWORK" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Byte" />
+            <Field name="PARTTIMEWORK" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Byte" />
+            <Field name="CASUALWORK" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Byte" />
+            <Field name="ANYWORK" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Byte" />
+            <Field name="STUDYING" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Byte" />
+            <Field name="ACTIVITIES" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Byte" />
+            <Field name="MAINACT" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Byte" />
+            <Field name="ANZSCO1" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Int16" />
+            <Field name="ANZSCO2" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Int16" />
+            <Field name="ANZSIC1" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Int16" />
+            <Field name="ANZSIC2" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Int16" />
+            <Field name="STARTPLACE" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Byte" />
+            <Field name="ANYSTOPS" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Int16" />
+            <Field name="NUMSTOPS" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Int16" />
+            <Field name="NUMTRIPS" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Int16" />
+            <Field name="NUMWGTSTOPS" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Int16" />
+            <Field name="NUMWGTTRIPS" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Int16" />
+            <Field name="REASONCODE" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Int16" />
+            <Field name="PRODIST" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Int16" />
+            <Field name="BIKEUSE" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Int16" />
+            <Field name="BIKEFREQ" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Int16" />
+            <Field name="PERSINC" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Int16" />
+            <Field name="WHOFILLED" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Int16" />
+            <Field name="PROXY" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Int16" />
+            <Field name="FILLDOW" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Int16" />
+            <Field name="FILLLAG" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Int16" />
+            <Field name="FILLLAGGRP" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Byte" />
+            <Field name="WGTAREA" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Byte" />
+            <Field name="DEMOGWGT11" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Float" />
+            <Field name="PERSWGT11" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`2_TWB_PERSONS_2012`" type="Float" />
+            <Field name="HHSIZE" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+            <Field name="HHVISITORS" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+            <Field name="HHSTRUCTURE" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+            <Field name="DWELLTYPE" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+            <Field name="OWNDWELL" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+            <Field name="YEARSLIVED" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+            <Field name="MONTHSLIVED" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+            <Field name="BICYCLES" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+            <Field name="CARS" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+            <Field name="FOURWDS" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+            <Field name="MBIKES" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+            <Field name="UTES" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+            <Field name="VANS" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+            <Field name="TRUCKS" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+            <Field name="OTHERVEHS" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+            <Field name="REGVEHS" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+            <Field name="HHINC" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`1_TWB_HOUSEHOLDS_2012`" type="Int16" />
+            <Field name="TRAVDATE" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+            <Field name="TRAVMONTH" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+            <Field name="TRAVYEAR" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`1_TWB_HOUSEHOLDS_2012`" type="Int16" />
+            <Field name="TRAVDOW" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`1_TWB_HOUSEHOLDS_2012`" type="Byte" />
+            <Field name="HOMELONG" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`1_TWB_HOUSEHOLDS_2012`" type="Double" />
+            <Field name="HOMELAT" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`1_TWB_HOUSEHOLDS_2012`" type="Double" />
+            <Field name="HOME_SA1_2011" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`1_TWB_HOUSEHOLDS_2012`" type="Double" />
+            <Field name="HOME_SA2_5DIGITCODE_2011" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\Zone System\SA1_2011_AUST.mif" type="Int32" />
+            <Field name="HOME_SA2_MAINCODE_2011" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\Zone System\SA1_2011_AUST.mif" type="Int32" />
+            <Field name="HOME_SA2_NAME_2011" size="40" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\Zone System\SA1_2011_AUST.mif" type="V_String" />
+            <Field name="HHWGT11" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`1_TWB_HOUSEHOLDS_2012`" type="Float" />
+            <Field name="PROSA2_5DIGITCODE_2011" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\Zone System\SA1_2011_AUST.mif" type="Int32" />
+            <Field name="Production SA2" size="40" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\Zone System\SA1_2011_AUST.mif" type="V_String" />
+            <Field name="ATTRSA2_5DIGITCODE_2011" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\Zone System\SA1_2011_AUST.mif" type="Int32" />
+            <Field name="Attraction SA2" size="40" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\Zone System\SA1_2011_AUST.mif" type="V_String" />
+            <Field name="bin" size="255" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`Time by Hours and Minutes`" type="V_WString" />
+            <Field name="HOUR" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`Time by Hours and Minutes`" type="Int32" />
+            <Field name="Time" size="19" source="Formula: DateTimeFormat([Time],'%H:%M:%S')" type="String" />
+            <Field name="TIMEBIN" source="Formula: DateTimeFormat([TIMEBIN],'%H:%M:%S')" type="Time" />
+            <Field name="DayCount" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Alteryx Output\Output_Trips_all.yxdb" type="Int32" />
+            <Field name="Modelling Purpose" size="255" source="Formula: [New]" type="V_WString" />
+            <Field name="Simplified" size="255" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\HTS datasets\TWB - Trip Linking Analysis_v2016_03_23.mdb|`Modelling 6 Purposes`" type="V_WString" />
+            <Field name="ORIGPLACE1_NAME" size="50" source="(Multiple Sources)" type="V_WString" />
+            <Field name="DESTPLACE1_NAME" size="50" source="(Multiple Sources)" type="V_WString" />
+            <Field name="ORIGPURP1_NAME" size="100" source="(Multiple Sources)" type="V_WString" />
+            <Field name="DESTPURP1_NAME" size="100" source="(Multiple Sources)" type="V_WString" />
+            <Field name="LORIGSA2_5DIGITCODE_2011" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\Zone System\SA1_2011_AUST.mif" type="Int32" />
+            <Field name="LORIGISA2_NAME_2011" size="40" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\Zone System\SA1_2011_AUST.mif" type="V_String" />
+            <Field name="LDESTSA2_5DIGITCODE_2011" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\Zone System\SA1_2011_AUST.mif" type="Int32" />
+            <Field name="LDESTSA2_NAME_2011" size="40" source="File: G:\MDAC_Modelling\Other\Personal\Matt Mehdi Taghavi\Alteryx_temp\2.Final HTS Analysis Alteryx Workflow\Toowoomba HTS\Inputs\Zone System\SA1_2011_AUST.mif" type="V_String" />
+            <Field name="Origin_Centroid" size="2147483647" source="CreatePoints: x=ORIGLONG y=ORIGLAT" type="SpatialObj" />
+            <Field name="Origin_Zone" source="Formula: IF IsNull([ZONE]) THEN 0 ELSE [ZONE] ENDIF" type="Int32" />
+            <Field name="Origin_SA2" size="50" source="Formula: IF IsNull([SA2_NAME_2011]) THEN &quot;External&quot; ELSE [SA2_NAME_2011] ENDIF" type="V_String" />
+            <Field name="Dest_Centroid" size="2147483647" source="CreatePoints: x=DESTLONG y=DESTLAT" type="SpatialObj" />
+            <Field name="Dest_Zone" source="Formula: IF IsNull([ZONE]) THEN 0 ELSE [ZONE] ENDIF" type="Int32" />
+            <Field name="Dest_SA2" size="50" source="Formula: IF IsNull([SA2_NAME_2011]) THEN &quot;External&quot; ELSE [SA2_NAME_2011] ENDIF" type="V_String" />
+            <Field name="New_MC_Purp" size="64" source="Formula: IF [Simplified] == &quot;hbw&quot; THEN [Modelling Purpose] ELSEIF [Simplified] == &quot;hbe&quot; THEN [Modelling Purpose] ELSE [Simplified] ENDIF" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="270" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="606" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\mztagha\AppData\Local\Temp\Engine_8024_ef56e0d32c0f4a2db1ffc7945b441f38_\Engine_6844_644f2385df6646baaa1e2d8a43685746_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Map>
+                  <BaseMap>[No Base Map]</BaseMap>
+                </Map>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="366" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Field>Origin_Zone</Field>
+            <Operator>=</Operator>
+            <Operands>
+              <Operand>0</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Origin_Zone] = 0</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="510" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Field>Dest_Zone</Field>
+            <Operator>=</Operator>
+            <Operands>
+              <Operand>0</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Dest_Zone] = 0</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="174" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">G:\MDAC_Modelling\Other\Personal\Hossein\TWB\WORKING\Calibration_distribution\Run_0\hbe.csv</File>
+          <FormatSpecificOptions>
+            <CodePage>28591</CodePage>
+            <Delimeter>,</Delimeter>
+            <IgnoreErrors>False</IgnoreErrors>
+            <FieldLen>254</FieldLen>
+            <AllowShareWrite>False</AllowShareWrite>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>hbe.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Field_1" size="254" source="File: G:\MDAC_Modelling\Other\Personal\Hossein\TWB\WORKING\Calibration_distribution\Run_0\hbe.csv" type="V_String" />
+            <Field name="Demand" size="254" source="File: G:\MDAC_Modelling\Other\Personal\Hossein\TWB\WORKING\Calibration_distribution\Run_0\hbe.csv" type="V_String" />
+            <Field name="Dist" size="254" source="File: G:\MDAC_Modelling\Other\Personal\Hossein\TWB\WORKING\Calibration_distribution\Run_0\hbe.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="318" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>Field_1</Field>
+          <NumFields value="3" />
+          <ErrorHandling>Last</ErrorHandling>
+          <RootName />
+          <Delimeters value="," />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="438" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="tonumber(Right([1],4),0,1)" field="1" size="254" type="V_String" />
+            <FormulaField expression="tonumber(left([2],5),0,1)" field="2" size="254" type="V_String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[1 = tonumber(Right([1],4),0,1)
+2 = tonumber(left([2],5),0,1)
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="750" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Origin_Zone" />
+            <Field field="Dest_Zone" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="1" />
+            <Field field="2" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <SelectFields>
+                <SelectField field="Left_LHHID" selected="False" />
+                <SelectField field="Left_LPERSID" selected="False" />
+                <SelectField field="Left_LFIRSTOP" selected="False" />
+                <SelectField field="Left_LASTOP" selected="False" />
+                <SelectField field="Left_LTRIPNO" selected="False" />
+                <SelectField field="Left_LTRIPNUM" selected="False" />
+                <SelectField field="Left_LSTARTIME" selected="False" />
+                <SelectField field="Left_LENDTIME" selected="False" />
+                <SelectField field="Left_LORIGSA1" selected="False" />
+                <SelectField field="Left_LORIGBSTM" selected="False" />
+                <SelectField field="Left_LDESTSA1" selected="False" />
+                <SelectField field="Left_LDESTBSTM" selected="False" />
+                <SelectField field="Left_OMP" selected="False" />
+                <SelectField field="Left_DMP" selected="False" />
+                <SelectField field="Left_MC_Purpose" selected="False" />
+                <SelectField field="Left_MC_Purpose_new" selected="False" />
+                <SelectField field="Left_VOCC" selected="False" />
+                <SelectField field="Left_vehCHG" selected="False" />
+                <SelectField field="Left_MODES" selected="False" />
+                <SelectField field="Left_MCM" selected="False" />
+                <SelectField field="Left_DIRECTION" selected="False" />
+                <SelectField field="Left_ATTRSA1" selected="False" />
+                <SelectField field="Left_ATTRBSTM" selected="False" />
+                <SelectField field="Left_PRODSA1" selected="False" />
+                <SelectField field="Left_PRODBSTM" selected="False" />
+                <SelectField field="Left_MIDTIME" selected="False" />
+                <SelectField field="Left_TPSTART" selected="False" />
+                <SelectField field="Left_TPMID" selected="False" />
+                <SelectField field="Left_TPEND" selected="False" />
+                <SelectField field="Left_STOPWGT11" selected="False" />
+                <SelectField field="Left_PERWGT" selected="False" />
+                <SelectField field="Left_ORIGPLACE1" selected="False" />
+                <SelectField field="Left_ORIGPLACE2" selected="False" />
+                <SelectField field="Left_ORIGPURP1" selected="False" />
+                <SelectField field="Left_ORIGPURP2" selected="False" />
+                <SelectField field="Left_DESTPLACE1" selected="False" />
+                <SelectField field="Left_DESTPLACE2" selected="False" />
+                <SelectField field="Left_DESTPURP1" selected="False" />
+                <SelectField field="Left_DESTPURP2" selected="False" />
+                <SelectField field="Left_ORIGLONG" selected="False" />
+                <SelectField field="Left_ORIGLAT" selected="False" />
+                <SelectField field="Left_DESTLONG" selected="False" />
+                <SelectField field="Left_DESTLAT" selected="False" />
+                <SelectField field="Left_PERSID" selected="False" />
+                <SelectField field="Left_PERSIDB" selected="False" />
+                <SelectField field="Left_HHID" selected="False" />
+                <SelectField field="Left_PERSNO" selected="False" />
+                <SelectField field="Left_AGE" selected="False" />
+                <SelectField field="Left_AGEGROUP" selected="False" />
+                <SelectField field="Left_SEX" selected="False" />
+                <SelectField field="Left_RELATIONSHIP" selected="False" />
+                <SelectField field="Left_COUNTRYCODE" selected="False" />
+                <SelectField field="Left_CARLICENCE" selected="False" />
+                <SelectField field="Left_MBIKELICENCE" selected="False" />
+                <SelectField field="Left_OTHERLICENCE" selected="False" />
+                <SelectField field="Left_NOLICENCE" selected="False" />
+                <SelectField field="Left_FULLTIMEWORK" selected="False" />
+                <SelectField field="Left_PARTTIMEWORK" selected="False" />
+                <SelectField field="Left_CASUALWORK" selected="False" />
+                <SelectField field="Left_ANYWORK" selected="False" />
+                <SelectField field="Left_STUDYING" selected="False" />
+                <SelectField field="Left_ACTIVITIES" selected="False" />
+                <SelectField field="Left_MAINACT" selected="False" />
+                <SelectField field="Left_ANZSCO1" selected="False" />
+                <SelectField field="Left_ANZSCO2" selected="False" />
+                <SelectField field="Left_ANZSIC1" selected="False" />
+                <SelectField field="Left_ANZSIC2" selected="False" />
+                <SelectField field="Left_STARTPLACE" selected="False" />
+                <SelectField field="Left_ANYSTOPS" selected="False" />
+                <SelectField field="Left_NUMSTOPS" selected="False" />
+                <SelectField field="Left_NUMTRIPS" selected="False" />
+                <SelectField field="Left_NUMWGTSTOPS" selected="False" />
+                <SelectField field="Left_NUMWGTTRIPS" selected="False" />
+                <SelectField field="Left_REASONCODE" selected="False" />
+                <SelectField field="Left_PRODIST" selected="False" />
+                <SelectField field="Left_BIKEUSE" selected="False" />
+                <SelectField field="Left_BIKEFREQ" selected="False" />
+                <SelectField field="Left_PERSINC" selected="False" />
+                <SelectField field="Left_WHOFILLED" selected="False" />
+                <SelectField field="Left_PROXY" selected="False" />
+                <SelectField field="Left_FILLDOW" selected="False" />
+                <SelectField field="Left_FILLLAG" selected="False" />
+                <SelectField field="Left_FILLLAGGRP" selected="False" />
+                <SelectField field="Left_WGTAREA" selected="False" />
+                <SelectField field="Left_DEMOGWGT11" selected="False" />
+                <SelectField field="Left_PERSWGT11" selected="False" />
+                <SelectField field="Left_HHSIZE" selected="False" />
+                <SelectField field="Left_HHVISITORS" selected="False" />
+                <SelectField field="Left_HHSTRUCTURE" selected="False" />
+                <SelectField field="Left_DWELLTYPE" selected="False" />
+                <SelectField field="Left_OWNDWELL" selected="False" />
+                <SelectField field="Left_YEARSLIVED" selected="False" />
+                <SelectField field="Left_MONTHSLIVED" selected="False" />
+                <SelectField field="Left_BICYCLES" selected="False" />
+                <SelectField field="Left_CARS" selected="False" />
+                <SelectField field="Left_FOURWDS" selected="False" />
+                <SelectField field="Left_MBIKES" selected="False" />
+                <SelectField field="Left_UTES" selected="False" />
+                <SelectField field="Left_VANS" selected="False" />
+                <SelectField field="Left_TRUCKS" selected="False" />
+                <SelectField field="Left_OTHERVEHS" selected="False" />
+                <SelectField field="Left_REGVEHS" selected="False" />
+                <SelectField field="Left_HHINC" selected="False" />
+                <SelectField field="Left_TRAVDATE" selected="False" />
+                <SelectField field="Left_TRAVMONTH" selected="False" />
+                <SelectField field="Left_TRAVYEAR" selected="False" />
+                <SelectField field="Left_TRAVDOW" selected="False" />
+                <SelectField field="Left_HOMELONG" selected="False" />
+                <SelectField field="Left_HOMELAT" selected="False" />
+                <SelectField field="Left_HOME_SA1_2011" selected="False" />
+                <SelectField field="Left_HOME_SA2_5DIGITCODE_2011" selected="False" />
+                <SelectField field="Left_HOME_SA2_MAINCODE_2011" selected="False" />
+                <SelectField field="Left_HOME_SA2_NAME_2011" selected="False" />
+                <SelectField field="Left_HHWGT11" selected="False" />
+                <SelectField field="Left_PROSA2_5DIGITCODE_2011" selected="False" />
+                <SelectField field="Left_Production SA2" selected="False" />
+                <SelectField field="Left_ATTRSA2_5DIGITCODE_2011" selected="False" />
+                <SelectField field="Left_Attraction SA2" selected="False" />
+                <SelectField field="Left_bin" selected="False" />
+                <SelectField field="Left_HOUR" selected="False" />
+                <SelectField field="Left_Time" selected="False" />
+                <SelectField field="Left_TIMEBIN" selected="False" />
+                <SelectField field="Left_DayCount" selected="False" />
+                <SelectField field="Left_Modelling Purpose" selected="False" />
+                <SelectField field="Left_Simplified" selected="False" />
+                <SelectField field="Left_ORIGPLACE1_NAME" selected="False" />
+                <SelectField field="Left_DESTPLACE1_NAME" selected="False" />
+                <SelectField field="Left_ORIGPURP1_NAME" selected="False" />
+                <SelectField field="Left_DESTPURP1_NAME" selected="False" />
+                <SelectField field="Left_LORIGSA2_5DIGITCODE_2011" selected="False" />
+                <SelectField field="Left_LORIGISA2_NAME_2011" selected="False" />
+                <SelectField field="Left_LDESTSA2_5DIGITCODE_2011" selected="False" />
+                <SelectField field="Left_LDESTSA2_NAME_2011" selected="False" />
+                <SelectField field="Left_Origin_Centroid" selected="False" />
+                <SelectField field="Left_Origin_Zone" selected="False" />
+                <SelectField field="Left_Origin_SA2" selected="False" />
+                <SelectField field="Left_Dest_Centroid" selected="False" />
+                <SelectField field="Left_Dest_Zone" selected="False" />
+                <SelectField field="Left_Dest_SA2" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="642" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="594" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <SelectFields>
+            <SelectField field="Field_1" selected="True" />
+            <SelectField field="Dist" selected="True" />
+            <SelectField field="1" selected="True" />
+            <SelectField field="2" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+        <Position x="522" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldType>All</FieldType>
+          <Fields orderChanged="False">
+            <Field name="1" />
+            <Field name="2" />
+            <Field name="Field_1" selected="False" />
+            <Field name="Demand" selected="False" />
+            <Field name="Dist" selected="False" />
+            <Field name="3" selected="False" />
+            <Field name="*Unknown" selected="False" />
+          </Fields>
+          <CopyOutput value="False" />
+          <Expression>ToNumber([_CurrentField_],1)</Expression>
+          <ChangeFieldType value="True" />
+          <OutputFieldType type="Double" size="8" scale="1" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>ToNumber([_CurrentField_],1)</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="846" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\mztagha\AppData\Local\Temp\Engine_8024_ef56e0d32c0f4a2db1ffc7945b441f38_\Engine_6844_e2cdd30796e247a1a43c3ebf9e840609_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="906" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <SelectFields>
+            <SelectField field="RecordID" selected="True" />
+            <SelectField field="LTRIPID" selected="True" />
+            <SelectField field="TRIPWGT" selected="True" />
+            <SelectField field="New_MC_Purp" selected="True" />
+            <SelectField field="Dist" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1098" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="0">G:\MDAC_Modelling\Other\Personal\Hossein\TWB\WORKING\Calibration_distribution\Inputs_dist\input_hts_dist.csv</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <LineEndStyle>CRLF</LineEndStyle>
+            <Delimeter>,</Delimeter>
+            <ForceQuotes>False</ForceQuotes>
+            <HeaderRow>True</HeaderRow>
+            <CodePage>28591</CodePage>
+            <WriteBOM>True</WriteBOM>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>input_hts_dist.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1002" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="if Contains([New_MC_Purp],&quot;HBW&quot;) then &quot;hbw&quot; elseif Contains([New_MC_Purp],&quot;HBE&quot;) then &quot;hbe&quot;  else [New_MC_Purp] Endif " field="Np" size="1073741823" type="V_WString" />
+            <FormulaField expression="&quot;int-int&quot;" field="st" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Np = if Contains([New_MC_Purp],"HBW") then "hbw" elseif Contains([New_MC_Purp],"...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="False" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="False" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="False" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Join" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Join" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="12" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="12" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>New Workflow2</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
